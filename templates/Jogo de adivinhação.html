@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='Css/Estilo.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Manhã do conhecimento</h1>
+        <nav><a href="/">Sobre
+        </a></nav>
+    </header>
+    <main>
+        <aside>
+            <h2>Scripts:</h2>
+            <nav>
+                <li><a href="/contador">Contador</a></li>
+                <li><a href="/palindromo">Verificador de palíndromos</a></li>
+                <li><a href="/conversorcpf">Conversor de °C para °F</a></li>
+                <li><a href="/conversorfpc">Conversor de °F para °C</a></li>
+                <li><a href="/fatorial">Calculadora de fatorial</a></li>
+                <li><a href="/adivinhação">Jogo de adivinhação</a></li>
+                <li><a href="/validarsenha">Validador de senha</a></li>
+                <li><a href="/paginabloqueada">Página bloqueada por senha</a></li>
+            </nav>
+        </aside>
+        <div class="content">
+            <section class="sec1">
+                <h3>Jogo de adivinhação:</h3>
+                <h4>Tentativas restantes:{%if tentativas%}
+                                            {{tentativas}}
+                                            {%endif%}
+                </h4>
+                <h4>Jogo número {{jogos}}</h4>
+                <h4>Número de vitórias: {{vitórias}}</h4>
+                <p>
+                    O jogo funciona da seguinte forma: <br>O computador escolherá um número aleatório de 1 a 50 e você deverá adivinhá-lo em 5 tentativas ou menos.
+                </p>
+                <form method="POST">
+                    <label for="Input">Adivinhe um número: </label>
+                    <input type="number" name="Input" id="Input" required>
+                    <button type="submit" name="adivinhar">adivinhar</button>
+                </form>
+                {%if resposta%}
+                    <h3>{{resposta}}</h3>
+                    {%endif%}
+                {%if continuar%}
+                    <form method="POST">
+                        <button type="submit" name="continuar">Continuar</button>
+                        <button type="submit" name="reset">Resetar</button>
+                    </form>
+                    {%endif%}
+            </section>
+            <section class="sec2">
+                <h3>Código:</h3>
+                <p>
+                    código
+                </p>
+            </section>
+        </div>
+    </main>
+    <footer>
+        <p>
+            &copy; Colégio Santo Antonio 2025
+        </p>
+        <img src="{{ url_for('static', filename='Images/Logo nova CSA.ico') }}" alt="Logo" class="logo">
+    </footer>
+</body>
+</html>
