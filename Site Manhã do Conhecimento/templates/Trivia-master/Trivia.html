@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trivia</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='Css/Estilo.css') }}">
+    <link rel="stylesheet" href="/static/Css/Estilo.css">
+</head>
+<body>
+    <header>
+        <h1>Manhã do conhecimento</h1>
+        <h2>Educação digital</h2>
+        <nav>
+            <a href="/">Sobre</a>
+        </nav>
+    </header>
+    <main>
+        <aside>
+            <h2>Scripts:</h2>
+            <nav>
+                <li><a href="/contador">Contador</a></li>
+                <li><a href="/palindromo">Verificador de palíndromos</a></li>
+                <li><a href="/conversor-c-f">Conversor de °C/°F e °F/°C</a></li>
+                <li><a href="/fatorial">Calculadora de fatorial</a></li>
+                <li><a href="/trivia">Trivia master</a></li>
+                <li><a href="/adivinhação">Jogo de adivinhação</a></li>
+                <li><a href="/validarsenha">Validador de senha</a></li>
+                <li><a href="/paginabloqueada">Página bloqueada por senha</a></li>
+            </nav>
+        </aside>
+        <div class="content">
+            <section>
+                <h1>Trivia!</h1>
+                <p>Esse jogo conssiste em 25 questões sobre 5 categorias, para cada acerto, você ganha uma certa quantidade de pontos e para cada erro, você perde metade dos pontos que você ganharia. </p>
+                <h3>Pontuação: {{pontuação}}</h3>
+            </section>
+            <section class="trivia">
+                <form method="post" class="trivia">
+                    <div class="col1">
+                        <h2>Geografia</h2>
+                        <button class="{{cat1_200}}" name="cat1-200">200</button>
+                        <button class="{{cat1_400}}" name="cat1-400">400</button>
+                        <button class="{{cat1_600}}" name="cat1-600">600</button>
+                        <button class="{{cat1_800}}" name="cat1-800">800</button>
+                        <button class="{{cat1_1000}}" name="cat1-1000">1000</button>
+                    </div>
+                    <div class="col2">
+                        <h2>Biologia</h2>
+                        <button class="{{cat2_200}}" name="cat2-200">200</button>
+                        <button class="{{cat2_400}}" name="cat2-400">400</button>
+                        <button class="{{cat2_600}}" name="cat2-600">600</button>
+                        <button class="{{cat2_800}}" name="cat2-800">800</button>
+                        <button class="{{cat2_1000}}" name="cat2-1000">1000</button>
+                    </div>
+                    <div class="col3">
+                        <h2>Informática</h2>
+                        <button class="{{cat3_200}}" name="cat3-200">200</button>
+                        <button class="{{cat3_400}}" name="cat3-400">400</button>
+                        <button class="{{cat3_600}}" name="cat3-600">600</button>
+                        <button class="{{cat3_800}}" name="cat3-800">800</button>
+                        <button class="{{cat3_1000}}" name="cat3-1000">1000</button>
+                    </div>
+                    <div class="col4">
+                        <h2>Gastronomia</h2>
+                        <button class="{{cat4_200}}" name="cat4-200">200</button>
+                        <button class="{{cat4_400}}" name="cat4-400">400</button>
+                        <button class="{{cat4_600}}" name="cat4-600">600</button>
+                        <button class="{{cat4_800}}" name="cat4-800">800</button>
+                        <button class="{{cat4_1000}}" name="cat4-1000">1000</button>
+                    </div>
+                    <div class="col5">
+                        <h2>Matemática</h2>
+                        <button class="{{cat5_200}}" name="cat5-200">200</button>
+                        <button class="{{cat5_400}}" name="cat5-400">400</button>
+                        <button class="{{cat5_600}}" name="cat5-600">600</button>
+                        <button class="{{cat5_800}}" name="cat5-800">800</button>
+                        <button class="{{cat5_1000}}" name="cat5-1000">1000</button>
+                    </div>
+                </form>
+            </section>
+            <section>
+                <h3>Código:</h3>
+                <p>código</p>
+            </section>
+        </div>
+    </main>
+    <footer>
+        <img src="{{ url_for('static', filename='Images/Logo nova CSA.ico') }}" alt="Logo" class="logo">
+        <p>
+            &copy; Colégio Santo Antonio 2025
+        </p>
+    </footer>
+</body>
+</html>

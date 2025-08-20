@@ -1,0 +1,129 @@
+/* Atualize Estilo.css */
+body {
+    background-color: #f9f9f9;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+header {
+    background-color: #004080;
+    border-radius: 0 0 10px 10px;
+    color: white;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+header h1, header h2{
+    text-align: center;
+}
+header nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: bold;
+    text-align: left;
+}
+
+header nav a:hover {
+    color: yellow;
+}
+
+main {
+    display: flex;
+    gap: 20px;
+    padding: 0 20px;
+    color: #333;
+}
+
+aside {
+    padding: 20px;
+    background-color: #e6f0ff;
+    border-radius: 10px;
+    flex: 1;
+    min-width: 200px;
+}
+
+main nav a {
+    color: #004080;
+    text-decoration: none;
+    font-weight: bold;
+    flex: 1;
+}
+
+.sair{
+    text-align: right;
+}
+
+main nav a:hover {
+    color: #00264d;
+}
+
+main li {
+    list-style: none;
+    margin-bottom: 10px;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    flex: 4;
+}
+.trivia {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    flex: auto;
+}
+
+.col1, .col2, .col3, .col4, .col5 {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex: 1;
+}
+.col1 h2, .col2 h2, .col3 h2, .col4 h2, .col5 h2 {
+    text-align: center;
+}
+section {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+}
+
+.sec1, .sec2, .sec3 {
+    flex: 1;
+}
+
+button {
+    background-color: #004080;
+    color: white;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #00264d;
+}
+
+footer {
+    padding: 20px;
+    text-align: center;
+    background-color: #004080;
+    color: white;
+    margin-top: 40px;
+}   
+.logo {
+    width: 50px;
+    height: auto;
+    margin-top: 20px;
+}
+.Press{
+    background-color: black;
+}

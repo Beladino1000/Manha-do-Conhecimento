@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='Css/Estilo.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Manhã do conhecimento</h1>
+        <h2>Educação digital</h2>
+        <nav>
+            <a href="/resetar">Resetar</a>
+        </nav>
+    </header>
+    <main>
+        <aside>
+            <h2>Scripts:</h2>
+            <nav>
+                <li><a href="/contador">Contador</a></li>
+                <li><a href="/palindromo">Verificador de palíndromos</a></li>
+                <li><a href="/conversor-c-f">Conversor de °C/°F e °F/°C</a></li>
+                <li><a href="/fatorial">Calculadora de fatorial</a></li>
+                <li><a href="/trivia">Trivia master</a></li>
+                <li><a href="/adivinhação">Jogo de adivinhação</a></li>
+                <li><a href="/validarsenha">Validador de senha</a></li>
+                <li><a href="/paginabloqueada">Página bloqueada por senha</a></li>
+            </nav>
+        </aside>
+        <div class="content">
+            <section class="sec1">
+                <h3>Sobre:</h3>
+                <p>
+                    Este é o nosso trabalho da manhã do conhecimento. Nós, alunos do segundo ano do colégio santo antônio aprendemos a linguagem de programação python e, com algum estudo autônomo, nos responsabilizamos de fazer esse site do zero para apresentar hoje, na manhã do conhecimento, tipos de scripts que nós aprendemos a fazer.
+                </p>
+            </section>
+            <section class="sec2">
+                <h3>Integrantes do trabalho:</h3>
+                <p>
+                    <li>Alice Sousa - 2ª A</li>
+                    <li>David Morais - 2ª A</li>
+                    <li>Bernardo Teixeira - 2ª A</li>
+                    <li>Amaury Rosca - 2ªB</li>
+                    <li>João Marcelo - 2ªB</li>
+                    <li>Fábio de Carvalho - 2ªB</li>
+                    <li>Sofia Sad -2ªC </li>
+                </p>
+            </section>
+        </div>
+    </main>
+    <footer>
+        <img src="{{ url_for('static', filename='Images/Logo nova CSA.ico') }}" alt="Logo" class="logo">
+        <p>
+            &copy; Colégio Santo Antonio 2025
+        </p>
+    </footer>
+</body>
+</html>
