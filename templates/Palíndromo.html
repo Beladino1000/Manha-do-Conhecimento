@@ -8,19 +8,19 @@ Testador de Palíndromos
 <a href="/">Sobre</a>
 {%endblock%}
 {%block content %}
-            <section class="sec1">
-                <h3>Testador de palíndromos:</h3>
-                <form method="POST">
-                    <label for="texto_usuario">Digite o suspeito de palíndromo:</label>
-                    <input type="text" id="texto_usuario" name="texto_usuario" required>
-                    <button type="submit">Testar</button>
-                </form>
-                {%if resposta%}
-                    <h4>{{resposta}}</h4>
-                    {%endif%}
-            </section>
-            <section class="sec2">
-                <h3>Código:</h3>
-                <p>código</p>
-            </section>
+<section class="sec1">
+    <h3>Testador de palíndromos:</h3>
+    <form method="POST">
+        <label for="texto_usuario">Digite o suspeito de palíndromo:</label>
+        <input type="text" id="texto_usuario" name="texto_usuario" required>
+        <button type="submit">Testar</button>
+    </form>
+    {%if resposta%}
+        <h4>{{resposta}}</h4>
+        {%endif%}
+</section>
+<section class="sec2">
+    <h3>Código:</h3>
+    <p>código</p>
+</section>
 {%endblock%}

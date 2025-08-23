@@ -8,31 +8,31 @@ Validador de senha
 <a href="/">Sobre</a>
 {%endblock%}
 {%block content %}
-            <section class="sec1">
-                <h3>Validador de Senha:</h3>
-                <form method="POST">
-                    <label for="senha">Digite uma senha para validá-la: </label>
-                    <input type="password" id="senha" name="senha" required>
-                    <button name="verify">Validar senha</button>
-                </form>
-                <form method="POST">
-                {%if resposta%}
-                    <h4>{{resposta}}</h4>
-                    {%endif%}
-                {%if mostrar%}
-                    <label for="csenha">Confirme sua senha: </label>
-                    <input type="password" name="csenha" id="csenha">
-                    <button name="define">Definir senha</button>
-                    {%if resposta2%}
-                        <h4>{{resposta2}}</h4>
-                        {%endif%}
-                    {%endif%}
-                </form>
-            </section>
-            <section class="sec2">
-                <h3>Código:</h3>
-                <p>
-                    código
-                </p>
-            </section>
+<section class="sec1">
+    <h3>Validador de Senha:</h3>
+    <form method="POST">
+        <label for="senha">Digite uma senha para validá-la: </label>
+        <input type="password" id="senha" name="senha" required>
+        <button name="verify">Validar senha</button>
+    </form>
+    <form method="POST">
+    {%if resposta%}
+        <h4>{{resposta}}</h4>
+        {%endif%}
+    {%if mostrar%}
+        <label for="csenha">Confirme sua senha: </label>
+        <input type="password" name="csenha" id="csenha">
+        <button name="define">Definir senha</button>
+        {%if resposta2%}
+            <h4>{{resposta2}}</h4>
+            {%endif%}
+        {%endif%}
+    </form>
+</section>
+<section class="sec2">
+    <h3>Código:</h3>
+    <p>
+        código
+    </p>
+</section>
 {%endblock%}
