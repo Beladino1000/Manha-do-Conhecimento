@@ -1,59 +1,30 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='Css/Estilo.css') }}">
-</head>
-<body>
-    <header>
-        <h1>Manhã do conhecimento</h1>
-        <h2>Educação digital</h2>
-        <nav>
-            <a href="/">Sobre</a>
-        </nav>
-    </header>
-    <main>
-        <aside>
-            <h2>Scripts:</h2>
-            <nav>
-                <li><a href="/contador">Contador</a></li>
-                <li><a href="/palindromo">Verificador de palíndromos</a></li>
-                <li><a href="/conversor-c-f">Conversor de °C/°F e °F/°C</a></li>
-                <li><a href="/fatorial">Calculadora de fatorial</a></li>
-                <li><a href="/trivia">Trivia master</a></li>
-                <li><a href="/adivinhação">Jogo de adivinhação</a></li>
-                <li><a href="/validarsenha">Validador de senha</a></li>
-                <li><a href="/paginabloqueada">Página bloqueada por senha</a></li>
-            </nav>
-        </aside>
-        <div class="content">
-            <section class="sec1">
-                <h3>Contador: {{valor}}</h3>
-                <form method="POST">
-                    <button name="add1">+1</button>
-                    <button name="subtract1">-1</button>
-                    <button name="reset">Resetar</button>
-                </form>
-                <form method="POST">
-                    <label for="vp">Valor personalizado: </label>
-                    <input type="number" name="vp" required>
-                    <button name="addvp">Adicionar</button>
-                    <button name="subtractvp">Retirar</button>
-                </form>
-            </section>
-            <section class="sec2">
-                <h3>Código:</h3>
-                <p></p>
-            </section>
-        </div>
-    </main>
-    <footer>
-        <img src="{{ url_for('static', filename='Images/Logo nova CSA.ico') }}" alt="Logo" class="logo">
-        <p>
-            &copy; Colégio Santo Antonio 2025
-        </p>
-    </footer>
-</body>
-</html>
+{% extends 'layout.html' %}
+
+{% block title %}
+Contador
+{% endblock %}
+
+{% block nav %}
+<a href="/">Sobre</a>
+{% endblock %}
+
+{% block content %}
+<section class="sec1">
+    <h3>Contador: {{ valor }}</h3>
+    <form method="POST">
+        <button name="add1">+1</button>
+        <button name="subtract1">-1</button>
+        <button name="reset">Resetar</button>
+    </form>
+    <form method="POST">
+        <label for="vp">Valor personalizado: </label>
+        <input type="number" name="vp" required>
+        <button name="addvp">Adicionar</button>
+        <button name="subtractvp">Retirar</button>
+    </form>
+</section>
+<section class="sec2">
+    <h3>Código:</h3>
+    <p></p>
+</section>
+{% endblock %}
