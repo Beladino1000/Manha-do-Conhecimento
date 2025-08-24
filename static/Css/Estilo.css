@@ -364,7 +364,6 @@ footer {
 }
 
 .trivia h2 {
-    border: none;
     text-align: center;
     background: linear-gradient(to bottom, var(--gold), #b8941f);
     color: var(--dark-blue);
@@ -489,7 +488,6 @@ footer {
     color: var(--primary-blue);
     margin-bottom: 1.2rem;
     padding-left: 15px;
-    border-left: 5px solid var(--gold);
     background: linear-gradient(to right, rgba(212, 175, 55, 0.1), transparent);
     padding-top: 8px;
     padding-bottom: 8px;
@@ -538,7 +536,6 @@ footer {
 }
 
 .content section h2:hover {
-    border-left-color: var(--secondary-blue);
     background: linear-gradient(to right, rgba(0, 102, 204, 0.1), transparent);
 }
 
