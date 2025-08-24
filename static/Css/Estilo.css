@@ -343,3 +343,113 @@ footer {
         margin: 5px;
     }
 }
+
+.trivia {
+    display: table;
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+.trivia .col1, 
+.trivia .col2, 
+.trivia .col3, 
+.trivia .col4, 
+.trivia .col5 {
+    display: table-cell;
+    vertical-align: top;
+    padding: 0 10px;
+    width: 20%;
+}
+
+.trivia h2 {
+    text-align: center;
+    background: linear-gradient(to bottom, var(--primary-blue), var(--dark-blue));
+    color: var(--white);
+    padding: 15px 10px;
+    border-radius: 8px 8px 0 0;
+    margin: 0 0 10px 0;
+    font-size: 1.1rem;
+}
+
+.trivia button {
+    display: block;
+    width: 100%;
+    margin: 8px 0;
+    padding: 15px 5px;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    background: linear-gradient(to bottom, var(--gold), #b8941f);
+    color: var(--dark-blue);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+}
+
+.trivia button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.22);
+    background: linear-gradient(to bottom, #e6c34c, var(--gold));
+}
+
+/* Estilos para botões desativados (quando uma pergunta já foi respondida) */
+.trivia button.Press {
+    background: linear-gradient(to bottom, #7f7f7f, #5a5a5a);
+    color: #cccccc;
+    cursor: not-allowed;
+}
+
+.trivia button.Press:hover {
+    transform: none;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+}
+
+/* Melhoria de espaçamento para todo o conteúdo */
+.content p, 
+.content li {
+    line-height: 1.8;
+    margin-bottom: 1.2em;
+}
+
+/* Ajustes de responsividade para a tabela de trivia */
+@media (max-width: 900px) {
+    .trivia {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .trivia .col1, 
+    .trivia .col2, 
+    .trivia .col3, 
+    .trivia .col4, 
+    .trivia .col5 {
+        display: block;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    
+    .trivia h2 {
+        font-size: 1rem;
+        padding: 12px 10px;
+    }
+    
+    .trivia button {
+        padding: 12px 5px;
+        font-size: 1.1rem;
+    }
+}
+
+/* Ajustes para telas muito pequenas */
+@media (max-width: 480px) {
+    .trivia h2 {
+        font-size: 0.9rem;
+    }
+    
+    .trivia button {
+        padding: 10px 5px;
+        font-size: 1rem;
+    }
+}
