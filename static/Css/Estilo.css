@@ -107,11 +107,13 @@ header nav a:hover {
 }
 
 main {
+    flex: 1 0 auto;
     display: flex;
     gap: 25px;
     padding: 0 20px;
     max-width: 1200px;
-    margin: 0 auto;
+    margin: 0 auto 25px;
+    width: 100%;
 }
 
 aside {
