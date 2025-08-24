@@ -64,28 +64,7 @@ def palindromo():
 
 @app.route('/contador',methods=['GET','POST'])
 def contador():
-    if 'valor' not in session:
-        session['valor']=0
-    if request.method=='POST':
-        if 'add1' in request.form:
-            session['valor']+=1
-        elif 'subtract1' in request.form:
-            session['valor']+=-1
-        elif 'reset' in request.form:
-            session['valor']=0
-        elif 'addvp' in request.form:
-            try:
-                valor_digitado=int(request.form["vp"])
-                session['valor']+=valor_digitado
-            except ValueError:
-                pass
-        elif 'subtractvp' in request.form:
-            try:
-                valor_digitado=int(request.form["vp"])*(-1)
-                session['valor']+=valor_digitado
-            except ValueError:
-                pass
-    return render_template('Contador.html',valor=session['valor'])
+    return render_template('Contador.html')
 
 @app.route('/fatorial', methods=['GET', 'POST'])
 def calculadora_fatorial():
