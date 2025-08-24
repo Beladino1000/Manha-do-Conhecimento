@@ -457,33 +457,54 @@ footer {
     }
 }
 
-/* Adicione estas regras ao seu arquivo CSS existente */
+.padrao-page .sec1 h3,
+.padrao-page .sec2 h3 {
+    font-family: 'Poppins', sans-serif;
+    color: var(--primary-blue);
+    margin-bottom: 25px;
+    font-size: 1.8rem;
+    border-bottom: 3px solid var(--gold);
+    padding-bottom: 12px;
+}
 
-/* Estilos específicos para a página de adivinhação */
-.sec1 h3, .sec2 h3 {
+.padrao-page .sec1 p,
+.padrao-page .sec2 p {
+    line-height: 1.9;
+    margin-bottom: 25px;
+    font-size: 1.2rem;
+    text-align: justify;
+}
+
+.padrao-page .sec2 li {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    padding-left: 10px;
+    border-left: 3px solid var(--secondary-blue);
+}
+
+/* ESTILOS ESPECÍFICOS PARA A PÁGINA DE ADIVINHAÇÃO */
+.adivinhacao-page .sec1 h3 {
     font-family: 'Poppins', sans-serif;
     color: var(--primary-blue);
     margin-bottom: 20px;
     font-size: 1.6rem;
-    border-bottom: 2px solid var(--gold);
-    padding-bottom: 10px;
 }
 
-.sec1 h4 {
+.adivinhacao-page .sec1 h4 {
     font-family: 'Poppins', sans-serif;
     color: var(--dark-blue);
-    margin: 15px 0;
-    font-size: 1.2rem;
+    margin: 20px 0 10px 0;
+    font-size: 1.3rem;
     font-weight: 600;
 }
 
-.sec1 p {
-    line-height: 1.8;
+.adivinhacao-page .sec1 p {
+    line-height: 1.9;
     margin-bottom: 25px;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
 }
 
-.sec1 form {
+.adivinhacao-page .sec1 form {
     background-color: var(--light-blue);
     padding: 25px;
     border-radius: 12px;
@@ -491,91 +512,100 @@ footer {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
 }
 
-.sec1 label {
+.adivinhacao-page .sec1 label {
     display: block;
-    margin-bottom: 12px;
+    margin-bottom: 15px;
     font-weight: 600;
     color: var(--dark-blue);
-    font-size: 1.1rem;
+    font-size: 1.2rem;
 }
 
-.sec1 input[type="number"] {
+.adivinhacao-page .sec1 input[type="number"] {
     width: 100%;
     max-width: 300px;
-    padding: 12px 15px;
+    padding: 14px 18px;
     border: 2px solid #ddd;
     border-radius: 8px;
-    font-size: 1.1rem;
-    margin-bottom: 15px;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
     transition: all 0.3s ease;
 }
 
-.sec1 input[type="number"]:focus {
+.adivinhacao-page .sec1 input[type="number"]:focus {
     border-color: var(--secondary-blue);
     box-shadow: 0 0 0 3px rgba(0, 102, 204, 0.2);
     outline: none;
 }
 
-.sec1 button[type="submit"] {
+.adivinhacao-page .sec1 button[type="submit"] {
     background: linear-gradient(to bottom, var(--primary-blue), var(--dark-blue));
     color: var(--white);
-    padding: 12px 25px;
+    padding: 14px 28px;
     border: none;
     border-radius: 8px;
     cursor: pointer;
     font-weight: 600;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     transition: all 0.3s ease;
     box-shadow: 0 3px 6px rgba(0, 64, 128, 0.2);
+    margin-top: 10px;
 }
 
-.sec1 button[type="submit"]:hover {
+.adivinhacao-page .sec1 button[type="submit"]:hover {
     background: linear-gradient(to bottom, var(--secondary-blue), var(--primary-blue));
     box-shadow: 0 5px 10px rgba(0, 64, 128, 0.3);
     transform: translateY(-2px);
 }
 
-.sec1 h3:last-of-type {
-    margin-top: 20px;
-    color: var(--secondary-blue);
-    background-color: var(--light-gold);
-    padding: 15px;
-    border-radius: 8px;
+/* ESTILOS ESPECÍFICOS PARA A PÁGINA DE TRIVIA */
+.trivia-page .trivia {
+    display: table;
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+.trivia-page .trivia .col1, 
+.trivia-page .trivia .col2, 
+.trivia-page .trivia .col3, 
+.trivia-page .trivia .col4, 
+.trivia-page .trivia .col5 {
+    display: table-cell;
+    vertical-align: top;
+    padding: 0 10px;
+    width: 20%;
+}
+
+.trivia-page .trivia h2 {
     text-align: center;
+    background: linear-gradient(to bottom, var(--gold), #b8941f);
+    color: var(--dark-blue);
+    padding: 15px 10px;
+    border-radius: 8px 8px 0 0;
+    margin: 0 0 10px 0;
+    font-size: 1.1rem;
+    font-weight: bold;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Estilos para a seção de código */
-.sec2 {
-    margin-top: 30px;
+.trivia-page .trivia button {
+    display: block;
+    width: 100%;
+    margin: 8px 0;
+    padding: 15px 5px;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    background: linear-gradient(to bottom, var(--primary-blue), var(--dark-blue));
+    color: var(--white);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
 }
 
-.sec2 p {
-    background-color: #f8f8f8;
-    padding: 20px;
-    border-radius: 8px;
-    border-left: 4px solid var(--gold);
-    font-family: 'Courier New', monospace;
-    line-height: 1.6;
-    overflow-x: auto;
-    font-size: 1rem;
-}
-
-/* Ajustes de responsividade */
-@media (max-width: 768px) {
-    .sec1 h3, .sec2 h3 {
-        font-size: 1.4rem;
-    }
-    
-    .sec1 h4 {
-        font-size: 1.1rem;
-    }
-    
-    .sec1 input[type="number"] {
-        max-width: 100%;
-    }
-}
-
-/* Melhorias gerais de espaçamento para todo o conteúdo */
+/* Estilos gerais que não afetam outras páginas */
 .content h3, 
 .content h4 {
     margin-bottom: 1.2em;
