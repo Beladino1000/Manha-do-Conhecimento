@@ -10,15 +10,14 @@ Biologia por 600
 
 {% block content %}
 <section>
-    Pergunta:
-    <img src="{{ url_for('static', filename='Images/nomedoarquivo.tipodoarquivo') }}" alt="Imagem da questão">
+    O que significa a sigla CPU?
 </section>
 <section>
     <form method="POST">
-        <li><button name="certo600">Resposta1</button></li>
-        <li><button name="errado600">Resposta1</button></li>
-        <li><button name="errado600">Resposta1</button></li>
-        <li><button name="errado600">Resposta1</button></li>
+        <li><button name="errado600">A) Central Process Unit</button></li>
+        <li><button name="certo600">B) Central Processing Unit </button></li>
+        <li><button name="errado600">C) Computer Personal Unit </button></li>
+        <li><button name="errado600">D) Core Program Utility</button></li>
     </form>
 </section>
 {% endblock %}

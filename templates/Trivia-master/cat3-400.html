@@ -1,7 +1,7 @@
 {% extends 'layout.html' %}
 
 {% block title %}
-Biologia por 400
+Informática por 400
 {% endblock %}
 
 {% block nav %}
@@ -10,15 +10,16 @@ Biologia por 400
 
 {% block content %}
 <section>
-    Pergunta:
-    <img src="{{ url_for('static', filename='Images/nomedoarquivo.tipodoarquivo') }}" alt="Imagem da questão">
+    Pergunta:Em Python, qual comando é usado para exibir algo na tela?
+
+
 </section>
 <section>
     <form method="POST">
-        <li><button name="certo400">Resposta1</button></li>
-        <li><button name="errado400">Resposta1</button></li>
-        <li><button name="errado400">Resposta1</button></li>
-        <li><button name="errado400">Resposta1</button></li>
+        <li><button name="certo400">A) print()</button></li>
+        <li><button name="errado400">B) show()</button></li>
+        <li><button name="errado400">C) console.log()</button></li>
+        <li><button name="errado400">D) range()</button></li>
     </form>
 </section>
 {% endblock %}

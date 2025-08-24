@@ -10,15 +10,14 @@ Biologia por 1000
 
 {% block content %}
 <section>
-    Pergunta:
-    <img src="{{ url_for('static', filename='Images/nomedoarquivo.tipodoarquivo') }}" alt="Imagem da questão">
+    Qual cientista criou o conceito da “World Wide Web” (WWW)?
 </section>
 <section>
     <form method="POST">
-        <li><button name="certo1000">Resposta1</button></li>
-        <li><button name="errado1000">Resposta1</button></li>
-        <li><button name="errado1000">Resposta1</button></li>
-        <li><button name="errado1000">Resposta1</button></li>
+        <li><button name="errado1000">A) Steve Jobs</button></li>
+        <li><button name="certo1000">B) Tim Berners-Lee </button></li>
+        <li><button name="errado1000">C) Bill Gates  </button></li>
+        <li><button name="errado1000">D) Larry Page</button></li>
     </form>
 </section>
 {% endblock %}
