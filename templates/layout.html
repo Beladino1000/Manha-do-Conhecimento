@@ -4,30 +4,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{%block title%}Titulo Padrão{%endblock%}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="{{ url_for('static', filename='Css/Estilo.css') }}">
 </head>
 <body>
+    <div class="pattern-overlay"></div>
     <header>
-        <h1>Manhã do conhecimento</h1>
-        <h2>Educação digital</h2>
-        <nav>
-            {%block nav%}
-                <a href="/">Sobre</a>
-            {%endblock%}
-        </nav>
+        <div class="header-content">
+            <div class="logo-title">
+                <img src="{{ url_for('static', filename='Images/Logo nova CSA.ico') }}" alt="Logo CSA" class="header-logo">
+                <div class="titles">
+                    <h1>Manhã do Conhecimento</h1>
+                    <h2>Educação Digital</h2>
+                </div>
+            </div>
+            <nav>
+                {%block nav%}
+                    <a href="/">Sobre</a>
+                {%endblock%}
+            </nav>
+        </div>
     </header>
     <main>
         <aside>
-            <h2>Scripts:</h2>
-            <nav>
-                <li><a href="/contador">Contador</a></li>
-                <li><a href="/palindromo">Verificador de palíndromos</a></li>
-                <li><a href="/conversor-c-f">Conversor de °C/°F e °F/°C</a></li>
-                <li><a href="/fatorial">Calculadora de fatorial</a></li>
-                <li><a href="/trivia">Trivia master</a></li>
-                <li><a href="/adivinhação">Jogo de adivinhação</a></li>
-                <li><a href="/validarsenha">Validador de senha</a></li>
-                <li><a href="/paginabloqueada">Página bloqueada por senha</a></li>
+            <div class="sidebar-header">
+                <h2><i class="fas fa-code"></i> Scripts Interativos</h2>
+            </div>
+            <nav class="sidebar-nav">
+                <ul>
+                    <li><a href="/contador"><i class="fas fa-calculator"></i> Contador</a></li>
+                    <li><a href="/palindromo"><i class="fas fa-exchange-alt"></i> Verificador de palíndromos</a></li>
+                    <li><a href="/conversor-c-f"><i class="fas fa-thermometer-half"></i> Conversor de Temperatura</a></li>
+                    <li><a href="/fatorial"><i class="fas fa-exclamation-circle"></i> Calculadora de fatorial</a></li>
+                    <li><a href="/trivia"><i class="fas fa-brain"></i> Trivia master</a></li>
+                    <li><a href="/adivinhação"><i class="fas fa-question-circle"></i> Jogo de adivinhação</a></li>
+                    <li><a href="/validarsenha"><i class="fas fa-lock"></i> Validador de senha</a></li>
+                    <li><a href="/paginabloqueada"><i class="fas fa-shield-alt"></i> Página bloqueada</a></li>
+                </ul>
             </nav>
         </aside>
         <div class="content">
@@ -35,10 +51,18 @@
         </div>
     </main>
     <footer>
-        <img src="{{ url_for('static', filename='Images/Logo nova CSA.ico') }}" alt="Logo" class="logo">
-        <p>
-            &copy; Colégio Santo Antonio 2025
-        </p>
+        <div class="footer-content">
+            <div class="footer-info">
+                <img src="{{ url_for('static', filename='Images/Logo nova CSA.ico') }}" alt="Logo" class="logo">
+                <p>&copy; Colégio Santo Antonio 2025 - Educação de qualidade para um futuro melhor</p>
+            </div>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+                <a href="#"><i class="fab fa-whatsapp"></i></a>
+            </div>
+        </div>
     </footer>
     {% block scripts %}{% endblock %}
 </body>
