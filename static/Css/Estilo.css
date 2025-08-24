@@ -457,85 +457,150 @@ footer {
     }
 }
 
-.adivinhacao-page .sec1 h3 {
+/* ESTILOS PARA TÍTULOS DAS SEÇÕES - MELHORIAS VISUAIS */
+.content section h1 {
     font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 2.5rem;
     color: var(--primary-blue);
-    margin-bottom: 20px;
-    font-size: 1.6rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    position: relative;
+    padding-bottom: 15px;
 }
 
-.adivinhacao-page .sec1 h4 {
+.content section h1::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 4px;
+    background: linear-gradient(to right, var(--gold), var(--primary-blue));
+    border-radius: 2px;
+}
+
+.content section h2 {
     font-family: 'Poppins', sans-serif;
-    color: var(--dark-blue);
-    margin: 20px 0 10px 0;
-    font-size: 1.3rem;
     font-weight: 600;
+    font-size: 2rem;
+    color: var(--primary-blue);
+    margin-bottom: 1.2rem;
+    padding-left: 15px;
+    border-left: 5px solid var(--gold);
+    background: linear-gradient(to right, rgba(212, 175, 55, 0.1), transparent);
+    padding-top: 8px;
+    padding-bottom: 8px;
 }
 
-.adivinhacao-page .sec1 p {
-    line-height: 1.9;
-    margin-bottom: 25px;
-    font-size: 1.2rem;
-}
-
-.adivinhacao-page .sec1 form {
-    background-color: var(--light-blue);
-    padding: 25px;
-    border-radius: 12px;
-    margin-top: 20px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
-}
-
-.adivinhacao-page .sec1 label {
-    display: block;
-    margin-bottom: 15px;
+.content section h3 {
+    font-family: 'Poppins', sans-serif;
     font-weight: 600;
+    font-size: 1.5rem;
     color: var(--dark-blue);
-    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
 }
 
-.adivinhacao-page .sec1 input[type="number"] {
-    width: 100%;
-    max-width: 300px;
-    padding: 14px 18px;
-    border: 2px solid #ddd;
-    border-radius: 8px;
+.content section h3::before {
+    content: '';
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    background-color: var(--gold);
+    border-radius: 50%;
+    margin-right: 10px;
+    box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.3);
+}
+
+.content section h4 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
     font-size: 1.2rem;
-    margin-bottom: 20px;
+    color: var(--dark-blue);
+    margin-bottom: 0.8rem;
+    padding-bottom: 5px;
+    border-bottom: 2px dotted rgba(0, 64, 128, 0.2);
+}
+
+/* Melhorias para a página de trivia - títulos das categorias */
+.trivia h2 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 1.1rem;
+    text-align: center;
+    background: linear-gradient(to bottom, var(--gold), #b8941f) !important;
+    color: var(--dark-blue) !important;
+    padding: 15px 10px !important;
+    border-radius: 8px 8px 0 0 !important;
+    margin: 0 0 10px 0 !important;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    border: none !important;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Efeito de brilho suave ao passar o mouse */
+.content section h1:hover,
+.content section h2:hover,
+.content section h3:hover {
     transition: all 0.3s ease;
 }
 
-.adivinhacao-page .sec1 input[type="number"]:focus {
-    border-color: var(--secondary-blue);
-    box-shadow: 0 0 0 3px rgba(0, 102, 204, 0.2);
-    outline: none;
+.content section h1:hover {
+    color: var(--secondary-blue);
 }
 
-.adivinhacao-page .sec1 button[type="submit"] {
-    background: linear-gradient(to bottom, var(--primary-blue), var(--dark-blue));
-    color: var(--white);
-    padding: 14px 28px;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    font-weight: 600;
-    font-size: 1.2rem;
-    transition: all 0.3s ease;
-    box-shadow: 0 3px 6px rgba(0, 64, 128, 0.2);
-    margin-top: 10px;
+.content section h2:hover {
+    border-left-color: var(--secondary-blue);
+    background: linear-gradient(to right, rgba(0, 102, 204, 0.1), transparent);
 }
 
-.adivinhacao-page .sec1 button[type="submit"]:hover {
-    background: linear-gradient(to bottom, var(--secondary-blue), var(--primary-blue));
-    box-shadow: 0 5px 10px rgba(0, 64, 128, 0.3);
-    transform: translateY(-2px);
+.content section h3:hover::before {
+    background-color: var(--secondary-blue);
+    box-shadow: 0 0 0 3px rgba(0, 102, 204, 0.3);
 }
 
-.content h3, 
-.content h4 {
-    margin-bottom: 1.2em;
+/* Ajustes para responsividade */
+@media (max-width: 768px) {
+    .content section h1 {
+        font-size: 2rem;
+        padding-bottom: 12px;
+    }
+    
+    .content section h1::after {
+        width: 80px;
+    }
+    
+    .content section h2 {
+        font-size: 1.6rem;
+    }
+    
+    .content section h3 {
+        font-size: 1.3rem;
+    }
 }
 
-.content p {
-    margin-bottom: 1.5em;
+@media (max-width: 480px) {
+    .content section h1 {
+        font-size: 1.8rem;
+    }
+    
+    .content section h2 {
+        font-size: 1.4rem;
+        padding-left: 12px;
+        border-left-width: 4px;
+    }
+    
+    .content section h3 {
+        font-size: 1.2rem;
+    }
+    
+    .content section h3::before {
+        width: 10px;
+        height: 10px;
+        margin-right: 8px;
+    }
 }
