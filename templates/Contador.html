@@ -10,22 +10,22 @@ Contador
 
 {% block content %}
 <section class="sec1">
-    <h3>Contador: <h3 id="valor">0</h3></h3>
-    <form method="POST">
-        <button onclick="add1()">+1</button>
-        <button name="subtract1">-1</button>
-        <button name="reset">Resetar</button>
-    </form>
-    <form method="POST">
+    <h3>Contador: <span id="valor">0</span></h3>
+    <div class="button-group">
+        <button id="increment">+1</button>
+        <button id="decrement">-1</button>
+        <button id="reset">Resetar</button>
+    </div>
+    <div class="custom-value">
         <label for="vp">Valor personalizado: </label>
-        <input type="number" name="vp" required>
-        <button name="addvp">Adicionar</button>
-        <button name="subtractvp">Retirar</button>
-    </form>
+        <input type="number" id="customInput" name="vp" required>
+        <button id="addCustom">Adicionar valor personalizado</button>
+        <button id="subtractCustom">Retirar valor personalizado</button>
+    </div>
 </section>
 <section class="sec2">
     <h3>Código:</h3>
-    <p></p>
+    <p>Este contador mantém seu valor mesmo após atualizar a página, utilizando o localStorage do navegador.</p>
 </section>
 {% endblock %}
 {% block scripts %}
