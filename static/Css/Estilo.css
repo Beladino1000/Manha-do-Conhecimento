@@ -69,7 +69,7 @@ header {
     width: 60px;
     height: 60px;
     border-radius: 30%;
-    background-color: var(--white);
+    background-color: linear-gradient(135deg, var(--primary-blue) 0%, var(--secondary-blue) 100%);
     padding: 0;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
