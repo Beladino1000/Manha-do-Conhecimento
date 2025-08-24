@@ -16,8 +16,11 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+html, body {
+    height: 100%;
+}
 body {
+    display: flex;
     background-color: var(--light-gray);
     font-family: 'Source Sans 3', sans-serif;
     margin: 0;
@@ -25,6 +28,7 @@ body {
     color: var(--text-dark);
     position: relative;
     min-height: 100vh;
+    flex-direction: column;
 }
 
 .pattern-overlay {
@@ -237,11 +241,12 @@ input[type="text"]:focus {
 }
 
 footer {
+    flex-shrink: 0;
     padding: 30px 0;
     text-align: center;
     background: linear-gradient(135deg, var(--primary-blue) 0%, var(--dark-blue) 100%);
     color: var(--white);
-    margin-top: 50px;
+    width: 100%;
 }
 
 .footer-content {
