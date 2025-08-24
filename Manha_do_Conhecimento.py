@@ -8,7 +8,7 @@ app = Flask(__name__)
 app.secret_key = 'Pedro Couto'
 app.permanent_session_lifetime = timedelta(days=1)
 
-pontuação = r"!@#$%¨&*()_=+§²¹³£¢¬[{]}ªº´`^~;:>,</?\| "
+pontuação = r"!@#$%¨&*()_=+§²¹³£¢¬[{]}ªº´`^~;:>,</?\|° "
 acentuadas = "áàãâäÁÀÃÂÄéèêëÉÈÊËíìîïÍÌÎÏóòõôöÓÒÕÔÖúùûüÚÙÛÜçÇ"
 sem_acento = "aaaaaAAAAAeeeeEEEEiiiiIIIIoooooOOOOOuuuuUUUUcC"
 
