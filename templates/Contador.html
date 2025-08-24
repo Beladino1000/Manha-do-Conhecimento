@@ -3,6 +3,7 @@
 {% block title %}
 Contador
 {% endblock %}
+{% block onload %}
 
 {% block nav %}
 <a href="/">Sobre</a>
@@ -12,15 +13,15 @@ Contador
 <section class="sec1">
     <h3>Contador: <span id="valor">0</span></h3>
     <div class="button-group">
-        <button id="increment">+1</button>
-        <button id="decrement">-1</button>
-        <button id="reset">Resetar</button>
+        <button onclick="add1()">+1</button>
+        <button onclick="subtract1()">-1</button>
+        <button onclick="reset()">Resetar</button>
     </div>
     <div class="custom-value">
         <label for="vp">Valor personalizado: </label>
-        <input type="number" id="customInput" name="vp" required>
-        <button id="addCustom">Adicionar valor personalizado</button>
-        <button id="subtractCustom">Retirar valor personalizado</button>
+        <input type="number" id="customInput" required>
+        <button onclick="addcv()"">Adicionar</button>
+        <button onclick="subtractcv()">Retirar</button>
     </div>
 </section>
 <section class="sec2">
