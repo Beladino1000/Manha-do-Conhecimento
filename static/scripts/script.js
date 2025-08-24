@@ -50,3 +50,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const initialValue = getCurrentValue();
     updateDisplay(initialValue);
 });
+function resetar() {
+    localStorage.clear(); // Limpa o localStorage
+}
