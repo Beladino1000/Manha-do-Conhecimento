@@ -525,23 +525,6 @@ footer {
     border-bottom: 2px dotted rgba(0, 64, 128, 0.2);
 }
 
-/* Melhorias para a página de trivia - títulos das categorias */
-.trivia h2 {
-    font-family: 'Poppins', sans-serif;
-    font-weight: 700;
-    font-size: 1.1rem;
-    text-align: center;
-    background: linear-gradient(to bottom, var(--gold), #b8941f) !important;
-    color: var(--dark-blue) !important;
-    padding: 15px 10px !important;
-    border-radius: 8px 8px 0 0 !important;
-    margin: 0 0 10px 0 !important;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
-    border: none !important;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
 /* Efeito de brilho suave ao passar o mouse */
 .content section h1:hover,
 .content section h2:hover,
@@ -561,46 +544,4 @@ footer {
 .content section h3:hover::before {
     background-color: var(--secondary-blue);
     box-shadow: 0 0 0 3px rgba(0, 102, 204, 0.3);
-}
-
-/* Ajustes para responsividade */
-@media (max-width: 768px) {
-    .content section h1 {
-        font-size: 2rem;
-        padding-bottom: 12px;
-    }
-    
-    .content section h1::after {
-        width: 80px;
-    }
-    
-    .content section h2 {
-        font-size: 1.6rem;
-    }
-    
-    .content section h3 {
-        font-size: 1.3rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .content section h1 {
-        font-size: 1.8rem;
-    }
-    
-    .content section h2 {
-        font-size: 1.4rem;
-        padding-left: 12px;
-        border-left-width: 4px;
-    }
-    
-    .content section h3 {
-        font-size: 1.2rem;
-    }
-    
-    .content section h3::before {
-        width: 10px;
-        height: 10px;
-        margin-right: 8px;
-    }
 }
