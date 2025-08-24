@@ -364,12 +364,14 @@ footer {
 
 .trivia h2 {
     text-align: center;
-    background: linear-gradient(to bottom, var(--primary-blue), var(--dark-blue));
-    color: var(--white);
+    background: linear-gradient(to bottom, var(--gold), #b8941f);
+    color: var(--dark-blue);
     padding: 15px 10px;
     border-radius: 8px 8px 0 0;
     margin: 0 0 10px 0;
     font-size: 1.1rem;
+    font-weight: bold;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
 }
 
 .trivia button {
@@ -380,8 +382,8 @@ footer {
     text-align: center;
     font-size: 1.2rem;
     font-weight: bold;
-    background: linear-gradient(to bottom, var(--gold), #b8941f);
-    color: var(--dark-blue);
+    background: linear-gradient(to bottom, var(--primary-blue), var(--dark-blue));
+    color: var(--white);
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -392,7 +394,7 @@ footer {
 .trivia button:hover {
     transform: translateY(-3px);
     box-shadow: 0 5px 12px rgba(0, 0, 0, 0.22);
-    background: linear-gradient(to bottom, #e6c34c, var(--gold));
+    background: linear-gradient(to bottom, var(--secondary-blue), var(--primary-blue));
 }
 
 /* Estilos para botões desativados (quando uma pergunta já foi respondida) */
