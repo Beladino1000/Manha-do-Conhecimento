@@ -209,15 +209,6 @@ def jogo_de_adivinhação():
             session['rodando'] = True
             resposta = ''
             continuar = ''
-    
-        elif 'reset' in request.form:
-            session['jogos'] = 1
-            session['vitórias'] = 0
-            session['tentativas'] = 5
-            session['valor'] = r.randint(1, 50)
-            session['rodando'] = True
-            resposta = ''
-            continuar = ''
 
     elif not session['rodando']:
         continuar = 'Jogar novamente'
