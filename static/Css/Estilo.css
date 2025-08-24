@@ -457,32 +457,6 @@ footer {
     }
 }
 
-.padrao-page .sec1 h3,
-.padrao-page .sec2 h3 {
-    font-family: 'Poppins', sans-serif;
-    color: var(--primary-blue);
-    margin-bottom: 25px;
-    font-size: 1.8rem;
-    border-bottom: 3px solid var(--gold);
-    padding-bottom: 12px;
-}
-
-.padrao-page .sec1 p,
-.padrao-page .sec2 p {
-    line-height: 1.9;
-    margin-bottom: 25px;
-    font-size: 1.2rem;
-    text-align: justify;
-}
-
-.padrao-page .sec2 li {
-    font-size: 1.2rem;
-    margin-bottom: 15px;
-    padding-left: 10px;
-    border-left: 3px solid var(--secondary-blue);
-}
-
-/* ESTILOS ESPECÍFICOS PARA A PÁGINA DE ADIVINHAÇÃO */
 .adivinhacao-page .sec1 h3 {
     font-family: 'Poppins', sans-serif;
     color: var(--primary-blue);
@@ -557,55 +531,6 @@ footer {
     transform: translateY(-2px);
 }
 
-/* ESTILOS ESPECÍFICOS PARA A PÁGINA DE TRIVIA */
-.trivia-page .trivia {
-    display: table;
-    width: 100%;
-    border-collapse: collapse;
-    margin: 20px 0;
-}
-
-.trivia-page .trivia .col1, 
-.trivia-page .trivia .col2, 
-.trivia-page .trivia .col3, 
-.trivia-page .trivia .col4, 
-.trivia-page .trivia .col5 {
-    display: table-cell;
-    vertical-align: top;
-    padding: 0 10px;
-    width: 20%;
-}
-
-.trivia-page .trivia h2 {
-    text-align: center;
-    background: linear-gradient(to bottom, var(--gold), #b8941f);
-    color: var(--dark-blue);
-    padding: 15px 10px;
-    border-radius: 8px 8px 0 0;
-    margin: 0 0 10px 0;
-    font-size: 1.1rem;
-    font-weight: bold;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
-}
-
-.trivia-page .trivia button {
-    display: block;
-    width: 100%;
-    margin: 8px 0;
-    padding: 15px 5px;
-    text-align: center;
-    font-size: 1.2rem;
-    font-weight: bold;
-    background: linear-gradient(to bottom, var(--primary-blue), var(--dark-blue));
-    color: var(--white);
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
-}
-
-/* Estilos gerais que não afetam outras páginas */
 .content h3, 
 .content h4 {
     margin-bottom: 1.2em;
