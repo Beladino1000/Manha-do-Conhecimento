@@ -10,9 +10,9 @@ Contador
 
 {% block content %}
 <section class="sec1">
-    <h3>Contador: {{ valor }}</h3>
+    <h3>Contador: <h3 id="valor">0</h3></h3>
     <form method="POST">
-        <button name="add1">+1</button>
+        <button onclick="add1()">+1</button>
         <button name="subtract1">-1</button>
         <button name="reset">Resetar</button>
     </form>
@@ -27,4 +27,7 @@ Contador
     <h3>Código:</h3>
     <p></p>
 </section>
+{% endblock %}
+{% block scripts %}
+<script src="{{ url_for('static', filename='scripts/script.js') }}"></script>
 {% endblock %}
