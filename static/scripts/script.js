@@ -6,7 +6,7 @@ function getCurrentValue() {
 
 // Função para atualizar o valor exibido e salvar no localStorage
 function updateDisplay(value) {
-    document.getElementById('valor').textContent = value;
+    document.getElementById('valor').textContent = ` ${value};
     localStorage.setItem('contadorValor', value);
 }
 
@@ -53,4 +53,5 @@ document.addEventListener('DOMContentLoaded', function() {
 //Função para lipar o localStorage
 function resetar() {
     localStorage.clear(); // Limpa o localStorage
+
 }
