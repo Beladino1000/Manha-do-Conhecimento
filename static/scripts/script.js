@@ -1,6 +1,6 @@
 // Função para obter o valor atual do localStorage
 function getCurrentValue() {
-    const storedValue = localStorage.getItem('contadorValor');
+    const storedValue = localStorage.getItem(parse'contadorValor');
     return storedValue ? parseInt(storedValue) : 0;
 }
 
@@ -55,3 +55,4 @@ function resetar() {
     localStorage.clear(); // Limpa o localStorage
 
 }
+
