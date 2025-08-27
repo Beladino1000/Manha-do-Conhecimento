@@ -52,7 +52,7 @@ header {
 
 .header-content {
     width: auto;
-    margin: 0 auto; 
+    margin: 0 50px; 
     display: flex;
     justify-content: space-between;
     align-items: center;
