@@ -51,7 +51,7 @@ header {
 }
 
 .header-content {
-    width: auto;
+    max-width: 3000px;
     margin: 0 auto; 
     display: flex;
     justify-content: space-between;
@@ -352,7 +352,7 @@ footer {
 
 .trivia {
     display: table;
-    width: 100%;
+    width: auto;
     border-collapse: collapse;
     margin: 20px 0;
 }
