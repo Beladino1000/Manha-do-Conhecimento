@@ -352,7 +352,7 @@ footer {
 
 .trivia {
     display: table;
-    width: 3000px;
+    width: auto;
     border-collapse: collapse;
     margin: 20px 0;
 }
