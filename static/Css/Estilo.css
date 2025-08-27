@@ -51,7 +51,7 @@ header {
 }
 
 .header-content {
-    max-width: 3000px;
+    width: auto;
     margin: 0 auto; 
     display: flex;
     justify-content: space-between;
@@ -352,7 +352,7 @@ footer {
 
 .trivia {
     display: table;
-    width: auto;
+    width: 3000px;
     border-collapse: collapse;
     margin: 20px 0;
 }
@@ -365,7 +365,7 @@ footer {
     display: table-cell;
     vertical-align: top;
     padding: 0 10px;
-    width: 20%;
+    width: 15%;
 }
 
 .trivia h2 {
