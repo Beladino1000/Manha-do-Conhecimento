@@ -241,7 +241,7 @@ def trivia():
     certos=['certo200','certo400','certo600','certo800','certo1000']
     errados=['errado200','errado400','errado600','errado800','errado1000']
     if elemento_comum(certos,request.form):
-        session['aba'] = 'Trivia-maste/Trivia.html'
+        session['aba'] = 'Trivia-master/Trivia.html'
         session['pontuação']=int(session['pontuação'])+int(replace_letras(elemento_comum(certos,request.form)))
 
     if elemento_comum(errados,request.form):
