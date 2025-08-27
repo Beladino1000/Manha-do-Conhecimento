@@ -21,6 +21,10 @@ def replace_master(texto: str)->str:
     tabela2=str.maketrans('','',pontuação)
     return texto.translate(tabela1).translate(tabela2)
 
+def elemento_comum(lista1,lista2):
+    for elem in lista1:
+        if elem in lista2:
+            return elem
 @app.route('/')
 def home():
     return render_template('Sobre.html')
@@ -233,39 +237,17 @@ def trivia():
         session['aba'] = 'Trivia-master/Trivia.html'
     if 'pontuação' not in session:
         session['pontuação']=0
-        
-    if 'certo200' in request.form:
-        session['aba'] = 'Trivia-master/Trivia.html'
-        session['pontuação']=int(session['pontuação'])+200
-    if 'certo400' in request.form:
-        session['aba'] = 'Trivia-master/Trivia.html'
-        session['pontuação']=int(session['pontuação'])+400
-    if 'certo600' in request.form:
-        session['aba'] = 'Trivia-master/Trivia.html'
-        session['pontuação']=int(session['pontuação'])+600
-    if 'certo800' in request.form:
-        session['aba'] = 'Trivia-master/Trivia.html'
-        session['pontuação']=int(session['pontuação'])+800
-    if 'certo1000' in request.form:
-        session['aba'] = 'Trivia-master/Trivia.html'
-        session['pontuação']=int(session['pontuação'])+1000
 
-    if 'errado200' in request.form:
+    certos=['certo200','certo400','certo600','certo800','certo1000']
+    errados=['errado200','errado400','errado600','errado800','errado1000']
+    if elemento_comum(certos,request.form):
+        session['aba'] = 'Trivia-maste/Trivia.html'
+        session['pontuação']=int(session['pontuação'])+int(replace_letras(elemento_comum(certos,request.form)))
+
+    if elemento_comum(errados,request.form):
         session['aba'] = 'Trivia-master/Trivia.html'
-        session['pontuação']=int(session['pontuação'])-100
-    if 'errado400' in request.form:
-        session['aba'] = 'Trivia-master/Trivia.html'
-        session['pontuação']=int(session['pontuação'])-200
-    if 'errado600' in request.form:
-        session['aba'] = 'Trivia-master/Trivia.html'
-        session['pontuação']=int(session['pontuação'])-300
-    if 'errado800' in request.form:
-        session['aba'] = 'Trivia-master/Trivia.html'
-        session['pontuação']=int(session['pontuação'])-400
-    if 'errado1000' in request.form:
-        session['aba'] = 'Trivia-master/Trivia.html'
-        session['pontuação']=int(session['pontuação'])-500
-        
+        session['pontuação']=int(session['pontuação'])-(int(replace_letras(elemento_comum(errados,request.form)))//2)
+
     if 'cat' not in session:
         session['cat']=['', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ]
 
