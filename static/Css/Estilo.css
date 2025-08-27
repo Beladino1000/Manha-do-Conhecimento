@@ -1,4 +1,4 @@
-        /* Estilo atualizado - Inspirado no Colégio Santo Antonio */
+
         :root {
             --primary-blue: #004080;
             --secondary-blue: #0066cc;
@@ -16,9 +16,11 @@
             padding: 0;
             box-sizing: border-box;
         }
+        
         html, body {
             height: 100%;
         }
+        
         body {
             display: flex;
             background-color: var(--light-gray);
@@ -41,7 +43,6 @@
             z-index: -1;
         }
 
-        /* HEADER CORRIGIDO */
         header {
             background: linear-gradient(135deg, var(--primary-blue) 0%, var(--secondary-blue) 100%);
             border-radius: 0 0 15px 15px;
@@ -117,7 +118,6 @@
             background-color: rgba(255, 255, 255, 0.1);
         }
 
-        /* Restante do CSS permanece igual */
         main {
             flex: 1 0 auto;
             display: flex;
@@ -388,123 +388,117 @@
             }
         }
 
-        .trivia {
-            display: table;
-            width: auto;
-            border-collapse: collapse;
+        /* ESTILOS ESPECÍFICOS PARA A TRIVIA - CORRIGIDOS */
+        .trivia-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: space-between;
             margin: 20px 0;
         }
 
-        .trivia .col1, 
-        .trivia .col2, 
-        .trivia .col3, 
-        .trivia .col4, 
-        .trivia .col5 {
-            display: table-cell;
-            vertical-align: top;
-            padding: 0 10px;
-            width: 15%;
+        .trivia-category {
+            flex: 1;
+            min-width: 180px;
+            background: linear-gradient(to bottom, var(--white), var(--light-blue));
+            border-radius: 10px;
+            padding: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
-        .trivia h2 {
+        .trivia-category h2 {
             text-align: center;
             background: linear-gradient(to bottom, var(--gold), #b8941f);
             color: var(--dark-blue);
-            padding: 15px 10px;
-            border-radius: 8px 8px 0 0;
-            margin: 0 0 10px 0;
+            padding: 12px 10px;
+            border-radius: 8px;
+            margin: 0 0 15px 0;
             font-size: 1.1rem;
             font-weight: bold;
-            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
         }
 
-        .trivia button {
+        .trivia-category button {
             display: block;
             width: 100%;
-            margin: 8px 0;
-            padding: 15px 5px;
+            margin: 10px 0;
+            padding: 12px 8px;
             text-align: center;
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             font-weight: bold;
             background: linear-gradient(to bottom, var(--primary-blue), var(--dark-blue));
             color: var(--white);
             border: none;
-            border-radius: 5px;
+            border-radius: 6px;
             cursor: pointer;
             transition: all 0.3s ease;
-            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
         }
 
-        .trivia button:hover {
+        .trivia-category button:hover {
             transform: translateY(-3px);
-            box-shadow: 0 5px 12px rgba(0, 0, 0, 0.22);
+            box-shadow: 0 5px 12px rgba(0, 0, 0, 0.2);
             background: linear-gradient(to bottom, var(--secondary-blue), var(--primary-blue));
         }
 
-        /* Estilos para botões desativados (quando uma pergunta já foi respondida) */
-        .trivia button.Press {
+        .trivia-category button.Press {
             background: linear-gradient(to bottom, #7f7f7f, #5a5a5a);
             color: #cccccc;
             cursor: not-allowed;
         }
 
-        .trivia button.Press:hover {
+        .trivia-category button.Press:hover {
             transform: none;
-            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+            box-shadow: none;
         }
 
-        /* Melhoria de espaçamento para todo o conteúdo */
-        .content p, 
-        .content li {
-            line-height: 1.8;
-            margin-bottom: 1.2em;
+        /* Ajustes de responsividade para a trivia */
+        @media (max-width: 1200px) {
+            .trivia-container {
+                gap: 12px;
+            }
+            
+            .trivia-category {
+                min-width: 160px;
+            }
         }
 
-        /* Ajustes de responsividade para a tabela de trivia */
         @media (max-width: 900px) {
-            .trivia {
-                display: flex;
+            .trivia-container {
+                gap: 10px;
+            }
+            
+            .trivia-category {
+                flex: 0 0 calc(50% - 10px);
+                min-width: 140px;
+            }
+            
+            .trivia-category h2 {
+                font-size: 1rem;
+                padding: 10px 8px;
+            }
+            
+            .trivia-category button {
+                padding: 10px 6px;
+                font-size: 1rem;
+                margin: 8px 0;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .trivia-container {
                 flex-direction: column;
             }
             
-            .trivia .col1, 
-            .trivia .col2, 
-            .trivia .col3, 
-            .trivia .col4, 
-            .trivia .col5 {
-                display: block;
-                width: 100%;
-                margin-bottom: 20px;
-            }
-            
-            .trivia h2 {
-                font-size: 1rem;
-                padding: 12px 10px;
-            }
-            
-            .trivia button {
-                padding: 12px 5px;
-                font-size: 1.1rem;
+            .trivia-category {
+                flex: 1;
+                min-width: auto;
             }
         }
 
-        /* Ajustes para telas muito pequenas */
-        @media (max-width: 480px) {
-            .trivia h2 {
-                font-size: 0.9rem;
-            }
-            
-            .trivia button {
-                padding: 10px 5px;
-                font-size: 1rem;
-            }
-        }
-
-        /* ESTILOS PARA TÍTULOS DAS SEÇÕES - MELHORIAS VISUAIS */
+        /* ESTILOS PARA TÍTULOS DAS SEÇÕES */
         .content section h1 {
             font-family: 'Poppins', sans-serif;
             font-weight: 700;
-            font-size: 2.5rem;
+            font-size: 2.2rem;
             color: var(--primary-blue);
             text-align: center;
             margin-bottom: 1.5rem;
@@ -527,7 +521,7 @@
         .content section h2 {
             font-family: 'Poppins', sans-serif;
             font-weight: 600;
-            font-size: 2rem;
+            font-size: 1.8rem;
             color: var(--primary-blue);
             margin-bottom: 1.2rem;
             padding-left: 15px;
