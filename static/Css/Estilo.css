@@ -51,7 +51,7 @@ header {
 }
 
 .header-content {
-    max-width: 1200px;
+    max-width: auto;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
