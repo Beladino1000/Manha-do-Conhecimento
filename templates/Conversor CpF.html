@@ -29,6 +29,39 @@ Conversor de Temperatura
 </section>
 <section class="sec3">
     <h3>Código:</h3>
-    <p>código</p>
+    <p>
+        print('Conversor de Celsius/Fahrenheit')<br>
+        # Mostramos o nome do programa para o usuário.<br><br>
+        
+        modo = 0<br>
+        # Criamos uma variável chamada "modo", que define como o programa vai operar.<br><br>
+        
+        while modo != 3:<br>
+            modo = int(input('Digite 1 para converter de ºC a ºF, digite 2 para converter de ºF a °C e 3 para sair: '))<br>
+        # Pedimos para o usuário escolher um modo de conversão, usando "input". "int" especifica que é um número inteiro.<br>
+        # Para que o número 3 feche o programa, conforme as instruções, precisamos criar um loop que rode indefinidamente, até o usuário<br>
+        # digitar 3. Por isso, utilizamos "while" para detectar se o modo é diferente de 3.<br><br>
+    
+            if modo < 3:<br>
+                temperatura = float(input('Qual a temperatura? '))<br>
+        # Se o usuário escolheu 1 ou 2, pedimos que ele digite a temperatura que será convertida.<br>
+        # Usamos float para permitir operações numéricas com casas decimais.<br><br>
+        
+            if modo == 1:<br>
+                resultado = (temperatura * 9 / 5 + 32)<br>
+        # Fórmula para converter de Celsius para Fahrenheit: (ºC × 9/5) + 32<br>
+        print(f'{temperatura}ºC equivale a {resultado}°F')<br>
+        # Mostramos o resultado da conversão.<br><br>
+        
+            elif modo == 2:<br>
+                resultado = ((temperatura - 32) * 5 / 9)<br>
+        # Fórmula para converter de Fahrenheit para Celsius: (ºF − 32) × 5/9<br>
+        print(f'{temperatura}ºF equivale a {resultado}°C')<br>
+        # Mostramos o resultado da conversão.<br><br>
+        
+        # Quando o usuário digita 3, o loop termina e o programa finaliza com a mensagem abaixo:<br>
+        print('Tchau!')<br>
+    </p>
 </section>
+
 {% endblock %}
