@@ -30,7 +30,45 @@ Jogo de Adivinhação
 <section class="sec2">
     <h3>Código:</h3>
     <p>
-        código
+        from random import randint<br>
+        # Dentro do python, existem bibliotecas com funcionalidades extras.<br>
+        # Nesse caso, importamos a função randint, dentro da biblioteca "random", que serve para gerar números aleatórios.<br><br>
+        
+        alvo = randint(1, 50)<br>
+        # Geramos um número aleatório entre 1 e 50 usando randint().<br>
+        # Esse número será o "alvo", ou seja, o número que o jogador precisa adivinhar.<br><br>
+        
+        número = int(input('Tente adivinhar o número em que estou pensando, de 1 a 50. Digite um número: '))<br>
+        # Pedimos que o jogador chute um número. O valor digitado é convertido para inteiro e salvo em "número".<br><br>
+        
+        tentativas = 5<br>
+        # Definimos que o jogador terá 5 tentativas para acertar o número.<br><br>
+        
+        while número != alvo:<br>
+        # Enquanto o número digitado for diferente do alvo, queremos que o programa continue perguntando. Para isso, usamos um loop "while".<br><br>
+        
+            if número > alvo:<br>
+                print('O número inserido é maior do que o alvo.')<br>
+            else:<br>
+                print('O número inserido é menor do que o alvo.')<br>
+        # Damos uma dica ao usuário, falando se o número é maior ou menor que o alvo.<br><br>
+        
+            tentativas -= 1<br>
+            if tentativas < 1:<br>
+                break<br>
+        # Tiramos uma tentativa a cada erro.<br>
+        # Se acabarem as tentativas, a função "break" encerra automaticamente o loop.<br><br>
+        
+            número = int(input('Tente adivinhar o número em que estou pensando, de 1 a 50. Digite um número: '))<br>
+            # Se ainda houverem tentativas, pedimos um novo palpite.<br><br>
+
+        if número == alvo:<br>
+            print('O número é este, parabéns!')<br>
+        else:<br>
+            print(f'O número era: {alvo}')<br>
+        # Se o número digitado for igual ao alvo, mostramos uma mensagem de parabéns!<br>
+        # Se o jogador não acertar dentro das 5 tentativas, mostramos qual era o número correto.
     </p>
 </section>
+
 {% endblock %}
