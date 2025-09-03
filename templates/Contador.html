@@ -21,9 +21,30 @@ Contador
 </section>
 <section class="sec2">
     <h3>Código:</h3>
+    <p>
+        contador = 0 
+# Criamos uma variável chamada "contador", que começa com valor 0.<br>
+# Ela será usada para somar todos os números digitados pelo usuário até chegar a 100 ou mais.<br><br>
+
+entrada = 0<br>
+# Criamos uma variável chamada "entrada", que conta quantas vezes o usuário digitou um número.<br><br>
+
+while contador <= 100:<br>
+# Usamos o comando "while" para que, enquanto o valor total acumulado em "contador" for 100 ou menos, o loop continue.<br><br>
+
+    contador += int(input("Escolha um número, por favor: "))<br>
+# Pedimos que o usuário digite um número. Esse valor é transformado em "int" (número inteirova) e é somado ao contador.<br><br>
+
+    entrada += 1<br>
+# Aumentamos o número de entradas em 1.<br>
+
+    print("Entrada:", entrada, "Contando:", contador)<br>
+# Mostramos na tela o número da entrada do usuário e o total acumulado até o momento.<br>
+    <p>
     <p>Este contador mantém seu valor mesmo após atualizar a página, utilizando o localStorage do navegador.</p>
 </section>
 {% endblock %}
 {% block scripts %}
 <script src="{{ url_for('static', filename='scripts/script.js') }}"></script>
+
 {% endblock %}
