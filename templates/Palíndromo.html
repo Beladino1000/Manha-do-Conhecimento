@@ -18,6 +18,50 @@ Testador de Palíndromos
 </section>
 <section class="sec2">
     <h3>Código:</h3>
-    <p>código</p>
+    <p>
+        # Um palíndromo é uma palavra, expressão ou frase que não muda se for lida de trás para frente, ignorando letras maiúscuals, espaços e
+        # pontuação. Exemplo: "Subi no onibus" é um palíndromo.<br><br><br>
+        
+        palavra = input("Digite uma frase ou palavra: ").replace(" ", "").lower()<br>
+        # O comando input pede ao usuário que digite uma frase ou palavra, e cria uma variável "palavra" com esse valor.<br>
+        # O comando ".replace(" ","")" substitui os espaços com "vazio", e o comando ".lower()" faz todos os caracteres virarem minúsculos.<br>
+        # Ou seja, agora temos uma "string" (é uma sequência de caracteres no python) sem espaços nem letras maiúsculas.<br><br>
+        
+        n = len(palavra)<br>
+        # O comando "len()" conta o número de caracteres dentro de uma string.<br>
+        # No caso, cria a variável "n" igual ao tamanho do input do usuário.<br><br>
+        
+        t = 0<br>
+        letras_iguais = 0<br>
+        # Aqui criamos algumas variáveis que vão auxiliar na comparação entre as letras.<br><br><br>
+        
+        while (t < n):<br>
+        # Como vamos precisar comparar cada letra da palavra, queremos criar um loop que roda "n" vezes.<br>
+        # Isso é feito usando um comando while, que roda enquanto t for menor do que n (t começa em 0).<br>
+        # Para isso, o valor t aumenta a cada vez que o comando while roda.<br><br>
+        
+            if (palavra[t]) == (palavra[(n-1)-t]):<br>
+                letras_iguais += 1<br>
+            t += 1<br>
+        # Basicamente, essa parte do código compara cada letra da palavra com a sua correspondente de trás para frente, começando pela primeira<br>
+        # e a última, depois a segunda com a penúltima, até chegar na última letra.<br>
+        # Se elas forem iguais, o valor de "letras_iguais" aumenta 1.<br><br>
+        
+        # A notação "palavra[t]" indica a letra na palavra que ocupa a posição "t".<br>
+        # Além disso, o valor de t aumenta a cada vez que o loop roda, o que faz passar de uma letra para a próxima.<br>
+        
+        # Obs.: No python, "palavra[0]" equivale á primeira letra, então a posição da última letra é "n-1" (não é o tamanho da palvra).<br>
+        # Logo, temos que "palavra[t]" e "palavra[(n-1)-t]", com t = 0, são exatamente a primeira e a última letras, e assim sucessivamente,<br>
+        # o que é exatamente o que queremos!<br><br><br>       
+                
+        if letras_iguais == n:<br>
+            print("A palavra é um palíndromo.")<br>
+        else:<br>
+            print("A palavra não é um palíndromo.")<br>
+        # Se o tivermos a mesma quantidade de "letras_iguais" quanto letras na palavra ("n"), o programa diz que a palavra é um palíndromo!<br>
+        # Isso só vai acontecer se a todas as letras forem iguais às suas correspondentes.<br>
+        # Caso contrário, o programa diz que a palavra não é um palíndromo.
+    </p>
 </section>
+
 {%endblock%}
