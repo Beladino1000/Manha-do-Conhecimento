@@ -1,4 +1,4 @@
-{%extends 'layout.html'%}
+    {%extends 'layout.html'%}
 
 {%block title%}
 Validador de senha
@@ -29,7 +29,69 @@ Validador de senha
 <section class="sec2">
     <h3>Código:</h3>
     <p>
-        código
+        # O objetivo desse código é validar se uma senha atende a 3 requisitos básicos de segurança:<br>
+        # 1. Ter pelo menos 8 caracteres<br>
+        # 2. Conter pelo menos uma letra<br>
+        # 3. Conter pelo menos um número<br>
+        # Enquanto a senha não atender a todos esses critérios, o programa continuará pedindo uma nova senha.<br><br>
+        
+        requisitos_cumpridos = 0<br>
+        # Criamos uma variável chamada "requisitos_cumpridos" que vai contar quantas regras foram obedecidas pela senha digitada.<br><br>
+        
+        while requisitos_cumpridos < 3:<br>
+        # Enquanto a senha não tiver todos os 3 requisitos, esse bloco vai continuar se repetindo, por causa do comando "while".<br><br>
+        
+            senha = input('Digite uma senha com no mínimo 8 caracteres, que tenha letras e números: ')<br>
+        # Aqui o programa pede para o usuário digitar uma senha.<br><br>
+        
+            número = False<br>
+            letra = False<br>
+            requisitos_cumpridos = 0<br>
+            n = 0<br>
+        # Reiniciamos as variáveis a cada nova senha:<br>
+        # - número e letra começam como False<br>
+        # - requisitos_cumpridos volta a ser 0<br>
+        # - n é o nosso contador para percorrer cada caractere da senha<br><br>
+        
+            if len(senha) >= 8:<br>
+                requisitos_cumpridos += 1<br>
+            else:<br>
+                print('A sua senha tem menos de 8 caracteres')<br>
+        # Avaliamos o tamanho da senha com len(). Se a senha tiver 8 ou mais caracteres, somamos 1 ponto.<br>
+        # Se a senha for curta demais, mostramos essa mensagem.<br><br>
+        
+            while n < len(senha):<br>
+                caractere = senha[n]<br>
+                n += 1<br>
+        # Aqui vamos analisar cada caractere da senha usando um laço "while", que continua rodando equanto "n" for menor do que o tamanho da senha.<br>
+        # Depois, definimos nosso "caractere" como "senha[n]", que é o caratere de posição n, e aumentamos o valor de n a cada loop.<br>
+        # Dessa forma, percorremos todos os caracteres da senha.<br><br>
+        
+                if caractere.isdigit():<br>
+                    número = True<br>
+        # Se o caractere for um número, marcamos número como True.<br><br>
+        
+                if caractere.isalpha():<br>
+                    letra = True<br>
+        # Se o caractere for uma letra, marcamos letra como True.<br><br>
+        
+            if número == True:<br>
+                requisitos_cumpridos += 1<br>
+            else:<br>
+                print('A sua senha não tem números')<br>
+        # Se encontramos pelo menos um número, somamos mais 1 ponto.<br>
+        # Se não tiver números, avisamos o usuário.<br><br>
+        
+            if letra == True:<br>
+                requisitos_cumpridos += 1<br>
+            else:<br>
+                print('A sua senha não tem letras')<br>
+        # Se encontramos pelo menos uma letra, somamos o terceiro ponto.<br>
+        # Se não tiver letras, mostramos essa mensagem.<br><br>
+        
+        print('A sua senha foi registrada')<br>
+        # Quando os 3 requisitos forem cumpridos, mostramos que a senha foi aceita!
     </p>
 </section>
+
 {%endblock%}
