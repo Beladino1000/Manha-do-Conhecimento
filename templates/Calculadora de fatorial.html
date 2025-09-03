@@ -21,16 +21,8 @@ Calculadora de Fatorial
     <p>
         # O fatorial(!) de um número natural é o produto de todos os números até chegar nele mesmo. Por exemplo, 5! = 5x4x3x2x1 = 120 <br><br><br>
 
-        número = input("Digite um número para calcular seu fatorial: ")<br>
-        # Pede que o usuário digite um número, e cria uma variável "número" com esse valor.<br><br>
-
-        while número.isdigit() == False:<br>
-            número = input("Valor inválido. Digite um número natural: ")<br>
-        # A função .isdigit() detecta se o valor da variável "número" (o valor que o usuário digitou) é realmente um número natural.<br>
-        # Enquanto não for um número, a função while vai continuar pedindo ao usuário que digite um número.<br><br>
-
-        número = int(número)<br>
-        # Agora que sabemos que o valor digitado é um número, precisamos especificar para o python que ele é um int (número inteiro).<br><br>
+        número = int(input("Digite um número para calcular seu fatorial: "))<br>
+        # Pede que o usuário digite um número, e cria uma variável "número" com esse valor, especificando que é um "int" (número inteiro).<br><br>
 
         total = 1<br>
         # Criamos uma outra variável "total", que vai ser o resultado do nosso fatorial.<br>
@@ -54,4 +46,5 @@ Calculadora de Fatorial
         # Obs.: Se o número for zero, a função while não vai nunca rodar, mas como o total começa sendo 1, o programa vai mostrar que 0! = 1
     </p>
 </section>
+
 {% endblock %}
