@@ -19,7 +19,20 @@ Página Bloqueada por Senha
 <section class="sec2">
     <h3>Código:</h3>
     <p>
-        código
+        senha = "abc123456"<br>
+        # Definimos a variável senha com o valor que representa a senha correta.<br>
+        # Obs.: Você pode definir a senha que quiser (ex: "abc123456"), mas, nesse site, use a do validador de senha.<br><br>
+        
+        tentativa = input("Digite a senha correta para poder acessar a página bloqueada: ")<br>
+        # O programa pede que o usuário digite a senha, e salva isso com a variável "tentativa".<br><br>
+        
+        while tentativa != senha:<br>
+            tentativa = input("Senha incorreta. Digite a senha correta para poder acessar a página bloqueada: ")<br>
+        print("Página desbloqueada!")<br>
+        # Usamos o comando "while" para criar um loop que roda enquanto a tentativa for diferente da senha, ou seja, ela esteja incorreta.<br>
+        # Então, o programa informa que a senha está incorreta e pergunta novamente.<br>
+        # Quando a senha estiver correta, o loop acaba e o usuário recebe a mensagem parabenizando.
     </p>
 </section>
+
 {% endblock %}
