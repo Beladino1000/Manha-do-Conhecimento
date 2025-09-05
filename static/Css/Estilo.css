@@ -238,7 +238,10 @@
             box-shadow: 0 5px 10px rgba(0, 64, 128, 0.3);
             transform: translateY(-2px);
         }
-
+        
+        button .Press{
+            background-color: #333333;
+        }
         input[type="text"] {
             padding: 10px 15px;
             border: 1px solid #ddd;
@@ -386,11 +389,6 @@
             .header-logo {
                 height: 50px;
             }
-        }
-        
-        .Press{
-            background-color: #333333;
-            color: aqua;
         }
 
         /* ESTILOS PARA TÍTULOS DAS SEÇÕES */
