@@ -239,8 +239,21 @@
             transform: translateY(-2px);
         }
         
-        button .Press{
-            background-color: #333333;
+        /* Corrected selector for a button that has the class "Press" */
+        button.Press {
+            background: #6c757d; /* A standard disabled gray color */
+            color: #ccc;
+            cursor: not-allowed;
+            box-shadow: none;
+            transform: none;
+        }
+
+        /* Ensure the hover effect is also disabled */
+        button.Press:hover {
+            background: #6c757d;
+            transform: none;
+            box-shadow: none;
+            cursor: not-allowed;
         }
         input[type="text"] {
             padding: 10px 15px;
