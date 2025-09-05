@@ -248,13 +248,13 @@ def trivia():
         session['aba'] = 'Trivia-master/Trivia.html'
         session['pontuação']=int(session['pontuação'])-(int(replace_letras(elemento_comum(errados,request.form)))//2)
 
-    explicações=['', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '']
+    explicações=['', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 'Deodoro da Fonseca assumiu a presidência em 1889, após a Proclamação da República.', 'O lema “Liberdade, Igualdade e Fraternidade” tornou-se o símbolo dos ideais da Revolução.', 'A França foi invadida pela Alemanha em 1940 e não fazia parte da aliança do Eixo (Alemanha, Itália e Japão).', 'O czar Alexandre I foi o responsável por enfrentar Napoleão, usando a estratégia da “terra arrasada”.', 'O Primeiro Triunvirato foi uma aliança política entre Júlio César, Pompeu e Crasso.', '', '', '', '', '']
 
     if 'explicacao' not in session:
         session['explicacao']=''
 
     if 'cat' not in session:
-        session['cat']=['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22', '23', '24']
+        session['cat']=[''*25]
 
     if 'cat1-200' in request.form and not session['cat'][0]=='Press':
         session['aba'] = 'Trivia-master/cat1-200.html'
