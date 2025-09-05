@@ -581,3 +581,8 @@
             background-color: var(--secondary-blue);
             box-shadow: 0 0 0 3px rgba(0, 102, 204, 0.3);
         }
+
+        .content section form li {
+            list-style: none;
+            margin-bottom: 10px;
+        }
