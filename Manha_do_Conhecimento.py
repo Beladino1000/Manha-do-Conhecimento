@@ -254,7 +254,7 @@ def trivia():
         session['explicacao']=''
 
     if 'cat' not in session:
-        session['cat']=[''*25]
+        session['cat']=['']*25
 
     if 'cat1-200' in request.form and not session['cat'][0]=='Press':
         session['aba'] = 'Trivia-master/cat1-200.html'
