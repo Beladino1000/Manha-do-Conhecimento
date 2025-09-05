@@ -6,15 +6,18 @@ Geografia por 800
 
 {% block content %}
 <section>
-    Pergunta:
-    <img src="{{ url_for('static', filename='Images/nomedoarquivo.tipodoarquivo') }}" alt="Imagem da questão">
+    <h3>Os rios são correntes de água em fluxo contínuo que se movem através de canais naturais, geralmente partindo de nascentes e fluindo em direção a outros rios, lagos, e a oceanos. Eles desempenham um papel fundamental na geografia física da Terra e são de extrema importância para o meio ambiente e para a sociedade humana.</h3><br> 
+    <h5>Disponível em: <a href="https://sme.goiania.go.gov.br/conexaoescola/eaja/geografia-os-rios-e-sua-importancia/">https://sme.goiania.go.gov.br/conexaoescola/eaja/geografia-os-rios-e-sua-importancia/</a> (adaptado)</h5>.<br>
+    <h3>Na foz do rio, o acúmulo de sedimentos frequentemente faz com que ele deságue em vários canais, criando uma formação geográfica triangular semelhante a um leque. <br>
+    Qual é o nome dessa formação?</h3>
+    <img src="{{ url_for('static', filename='Images/imagem.jpg') }}" alt="Imagem da questão">
 </section>
 <section>
     <form method="POST">
-        <li><button name="certo800">Resposta1</button></li>
-        <li><button name="errado800">Resposta1</button></li>
-        <li><button name="errado800">Resposta1</button></li>
-        <li><button name="errado800">Resposta1</button></li>
+        <li><button name="errado800">A) Meandro</button></li>
+        <li><button name="errado800">B) Leito</button></li>
+        <li><button name="errado800">C) Marajó</button></li>
+        <li><button name="certo800">D) Delta</button></li>
     </form>
 </section>
 {% endblock %}

@@ -10,6 +10,12 @@ Trivia
                 <h3>Pontuação: {{pontuação}}</h3>
                 <p>Esse jogo conssiste em 25 questões sobre 5 categorias, para cada acerto, você ganha uma certa quantidade de pontos e para cada erro, você perde metade dos pontos que você ganharia. </p>
             </section>
+            {%if mensagem %}
+                <section>
+                    <p>{{ mensagem_de_resposta }}</p>
+                </section>
+            {% endif %}
+            </section>
             <section class="trivia">
                 <form method="post" class="trivia">
                     <div class="col1">
@@ -53,9 +59,5 @@ Trivia
                         <button class="{{cat5_1000}}" name="cat5-1000">1000</button>
                     </div>
                 </form>
-            </section>
-            <section>
-                <h3>Código:</h3>
-                <p>código</p>
             </section>
 {% endblock %}

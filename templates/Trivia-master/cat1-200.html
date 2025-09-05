@@ -1,20 +1,21 @@
 {% extends 'layout.html' %}
 
 {% block title %}
-Geografia por 200
+Geografia por 800
 {% endblock %}
 
 {% block content %}
 <section>
-    Pergunta:
-    <img src="{{ url_for('static', filename='Images/nomedoarquivo.tipodoarquivo') }}" alt="Imagem da questão">
+    <h3>Há 20 anos, os brasileiros foram às urnas em plebiscito nacional, por determinação constitucional, para escolher entre a forma de governo República ou Monarquia e entre Presidencialismo ou Parlamentarismo como sistema de governo a ser adotado no Brasil.</h3><br> 
+    <h5>Disponível em: <a href="https://www.tse.jus.br/comunicacao/noticias/2013/Abril/plebiscito-sobre-forma-e-sistema-de-governo-completa-20-anos">https://www.tse.jus.br/comunicacao/noticias/2013/Abril/plebiscito-sobre-forma-e-sistema-de-governo-completa-20-anos</a> Acesso em: 1 set 2025 (adaptado)</h5>.<br>
+    <h3>Em 2025, como consequência desse plebiscito, o Brasil é, na atualidade:</h3>
 </section>
 <section>
     <form method="POST">
-        <li><button name="certo200">Resposta1</button></li>
-        <li><button name="errado200">Resposta1</button></li>
-        <li><button name="errado200">Resposta1</button></li>
-        <li><button name="errado200">Resposta1</button></li>
+        <li><button name="errado800">A) República Parlamentarista</button></li>
+        <li><button name="certo800">B) República Presidencialista</button></li>
+        <li><button name="errado800">C) Monarquia Parlamentarista</button></li>
+        <li><button name="errado800">D) Monarquia Absolutista</button></li>
     </form>
 </section>
 {% endblock %}

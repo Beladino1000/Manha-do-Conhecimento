@@ -248,88 +248,118 @@ def trivia():
         session['aba'] = 'Trivia-master/Trivia.html'
         session['pontuação']=int(session['pontuação'])-(int(replace_letras(elemento_comum(errados,request.form)))//2)
 
+    explicações=['', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '']
+
+    if 'explicacao' not in session:
+        session['explicacao']=''
+
     if 'cat' not in session:
-        session['cat']=['', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '']
+        session['cat']=['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22', '23', '24',]
 
     if 'cat1-200' in request.form and not session['cat'][0]=='Press':
         session['aba'] = 'Trivia-master/cat1-200.html'
         session['cat'][0]='Press'
+        session['explicacao']=explicações[0]
     if 'cat1-400' in request.form and not session['cat'][1]=='Press':
         session['aba'] = 'Trivia-master/cat1-400.html'
         session['cat'][1]='Press'
+        session['explicacao']=explicações[1]
     if 'cat1-600' in request.form and not session['cat'][2]=='Press':
         session['aba'] = 'Trivia-master/cat1-600.html'
         session['cat'][2]='Press'
+        session['explicacao']=explicações[2]
     if 'cat1-800' in request.form and not session['cat'][3]=='Press':
         session['aba'] = 'Trivia-master/cat1-800.html'
         session['cat'][3]='Press'
+        session['explicacao']=explicações[3]
     if 'cat1-1000' in request.form and not session['cat'][4]=='Press':
         session['aba'] = 'Trivia-master/cat1-1000.html'
         session['cat'][4]='Press'
+        session['explicacao']=explicações[4]
 
     if 'cat2-200' in request.form and not session['cat'][5]=='Press':
         session['aba'] = 'Trivia-master/cat2-200.html'
         session['cat'][5]='Press'
+        session['explicacao']=explicações[5]
     if 'cat2-400' in request.form and not session['cat'][6]=='Press':
         session['aba'] = 'Trivia-master/cat2-400.html'
         session['cat'][6]='Press'
+        session['explicacao']=explicações[6]
     if 'cat2-600' in request.form and not session['cat'][7]=='Press':
         session['aba'] = 'Trivia-master/cat2-600.html'
         session['cat'][7]='Press'
+        session['explicacao']=explicações[7]
     if 'cat2-800' in request.form and not session['cat'][8]=='Press':
         session['aba'] = 'Trivia-master/cat2-800.html'
         session['cat'][8]='Press'
+        session['explicacao']=explicações[8]
     if 'cat2-1000' in request.form and not session['cat'][9]=='Press':
         session['aba'] = 'Trivia-master/cat2-1000.html'
         session['cat'][9]='Press'
+        session['explicacao']=explicações[9]
 
     if 'cat3-200' in request.form and not session['cat'][10]=='Press':
         session['aba'] = 'Trivia-master/cat3-200.html'
         session['cat'][10]='Press'
+        session['explicacao']=explicações[10]
     if 'cat3-400' in request.form and not session['cat'][11]=='Press':
         session['aba'] = 'Trivia-master/cat3-400.html'
         session['cat'][11]='Press'
+        session['explicacao']=explicações[11]
     if 'cat3-600' in request.form and not session['cat'][12]=='Press':
         session['aba'] = 'Trivia-master/cat3-600.html'
         session['cat'][12]='Press'
+        session['explicacao']=explicações[12]
     if 'cat3-800' in request.form and not session['cat'][13]=='Press':
         session['aba'] = 'Trivia-master/cat3-800.html'
         session['cat'][13]='Press'
+        session['explicacao']=explicações[13]
     if 'cat3-1000' in request.form and not session['cat'][14]=='Press':
         session['aba'] = 'Trivia-master/cat3-1000.html'
         session['cat'][14]='Press'
+        session['explicacao']=explicações[14]
 
     if 'cat4-200' in request.form and not session['cat'][15]=='Press':
         session['aba'] = 'Trivia-master/cat4-200.html'
         session['cat'][15]='Press'
+        session['explicacao']=explicações[15]
     if 'cat4-400' in request.form and not session['cat'][16]=='Press':
         session['aba'] = 'Trivia-master/cat4-400.html'
         session['cat'][16]='Press'
+        session['explicacao']=explicações[16]
     if 'cat4-600' in request.form and not session['cat'][17]=='Press':
         session['aba'] = 'Trivia-master/cat4-600.html'
         session['cat'][17]='Press'
+        session['explicacao']=explicações[17]
     if 'cat4-800' in request.form and not session['cat'][18]=='Press':
         session['aba'] = 'Trivia-master/cat4-800.html'
         session['cat'][18]='Press'
+        session['explicacao']=explicações[18]
     if 'cat4-1000' in request.form and not session['cat'][19]=='Press':
         session['aba'] = 'Trivia-master/cat4-1000.html'
         session['cat'][19]='Press'
+        session['explicacao']=explicações[19]
 
     if 'cat5-200' in request.form and not session['cat'][20]=='Press':
         session['aba'] = 'Trivia-master/cat5-200.html'
         session['cat'][20]='Press'
+        session['explicacao']=explicações[20]
     if 'cat5-400' in request.form and not session['cat'][21]=='Press':
         session['aba'] = 'Trivia-master/cat5-400.html'
         session['cat'][21]='Press'
+        session['explicacao']=explicações[21]
     if 'cat5-600' in request.form and not session['cat'][22]=='Press':
         session['aba'] = 'Trivia-master/cat5-600.html'
         session['cat'][22]='Press'
+        session['explicacao']=explicações[22]
     if 'cat5-800' in request.form and not session['cat'][23]=='Press':
         session['aba'] = 'Trivia-master/cat5-800.html'
         session['cat'][23]='Press'
+        session['explicacao']=explicações[23]
     if 'cat5-1000' in request.form and not session['cat'][24]=='Press':
         session['aba'] = 'Trivia-master/cat5-1000.html'
         session['cat'][24]='Press'
+        session['explicacao']=explicações[24]
 
     return render_template(session['aba'],
                            pontuação=session['pontuação'],
