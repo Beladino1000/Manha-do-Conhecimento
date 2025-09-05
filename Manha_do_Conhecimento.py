@@ -249,7 +249,7 @@ def trivia():
         session['pontuação']=int(session['pontuação'])-(int(replace_letras(elemento_comum(errados,request.form)))//2)
 
     if 'cat' not in session:
-        session['cat']=['', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ]
+        session['cat']=['', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '']
 
     if 'cat1-200' in request.form and not session['cat'][0]=='Press':
         session['aba'] = 'Trivia-master/cat1-200.html'
