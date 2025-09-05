@@ -6,15 +6,14 @@ Gastronomia por 200
 
 {% block content %}
 <section>
-    Pergunta:
-    <img src="{{ url_for('static', filename='Images/nomedoarquivo.tipodoarquivo') }}" alt="Imagem da questão">
+    <h3>Na Roma Antiga, quem formava o chamado “Primeiro Triunvirato”?</h3>
 </section>
 <section>
     <form method="POST">
-        <li><button name="certo1000">Resposta1</button></li>
-        <li><button name="errado1000">Resposta1</button></li>
-        <li><button name="errado1000">Resposta1</button></li>
-        <li><button name="errado1000">Resposta1</button></li>
+        <li><button name="certo1000">A) César, Pompeu e Crasso</button></li>
+        <li><button name="errado1000">B) César, Augusto e Marco Antônio</button></li>
+        <li><button name="errado1000">C) Rômulo, Remo e Tito</button></li>
+        <li><button name="errado1000">D) Trajano, Nero e Adriano</button></li>
     </form>
 </section>
 {% endblock %}

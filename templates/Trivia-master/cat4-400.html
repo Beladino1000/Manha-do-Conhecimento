@@ -1,20 +1,19 @@
 {% extends 'layout.html' %}
 
 {% block title %}
-Gastronomia por 400
+História por 400
 {% endblock %}
 
 {% block content %}
 <section>
-    Pergunta:
-    <img src="{{ url_for('static', filename='Images/nomedoarquivo.tipodoarquivo') }}" alt="Imagem da questão">
+    <h3>Durante a Revolução Francesa, qual era o lema dos revolucionários?</h3>
 </section>
 <section>
     <form method="POST">
-        <li><button name="certo400">Resposta1</button></li>
-        <li><button name="errado400">Resposta1</button></li>
-        <li><button name="errado400">Resposta1</button></li>
-        <li><button name="errado400">Resposta1</button></li>
+        <li><button name="errado400">A) Paz, Pão e Terra</button></li>
+        <li><button name="certo400">B) Liberdade, Igualdade e Fraternidade</button></li>
+        <li><button name="errado400">c) Ordem e Progresso</button></li>
+        <li><button name="errado400">D) Unidade, Fé e Trabalho</button></li>
     </form>
 </section>
 {% endblock %}

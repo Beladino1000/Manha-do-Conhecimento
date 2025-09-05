@@ -1,20 +1,19 @@
 {% extends 'layout.html' %}
 
 {% block title %}
-Gastronomia por 200
+História por 200
 {% endblock %}
 
 {% block content %}
 <section>
-    Pergunta:
-    <img src="{{ url_for('static', filename='Images/nomedoarquivo.tipodoarquivo') }}" alt="Imagem da questão">
+    <h3>Quem foi o primeiro presidente do Brasil?</h3>
 </section>
 <section>
     <form method="POST">
-        <li><button name="certo200">Resposta1</button></li>
-        <li><button name="errado200">Resposta1</button></li>
-        <li><button name="errado200">Resposta1</button></li>
-        <li><button name="errado200">Resposta1</button></li>
+        <li><button name="errado200">A) Getúlio Vargas</button></li>
+        <li><button name="certo200">B) Deodoro da Fonseca</button></li>
+        <li><button name="errado200">C) Floriano Peixoto</button></li>
+        <li><button name="errado200">D) Dom Pedro I</button></li>
     </form>
 </section>
 {% endblock %}

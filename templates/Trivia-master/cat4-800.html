@@ -6,15 +6,14 @@ Gastronomia por 200
 
 {% block content %}
 <section>
-    Pergunta:
-    <img src="{{ url_for('static', filename='Images/nomedoarquivo.tipodoarquivo') }}" alt="Imagem da questão">
+    Quem liderou a resistência contra Napoleão na campanha da Rússia?
 </section>
 <section>
     <form method="POST">
-        <li><button name="certo800">Resposta1</button></li>
-        <li><button name="errado800">Resposta1</button></li>
-        <li><button name="errado800">Resposta1</button></li>
-        <li><button name="errado800">Resposta1</button></li>
+        <li><button name="errado800">A) Nicolau I</button></li>
+        <li><button name="certo800">B) Alexandre I</button></li>
+        <li><button name="errado800">C) Pedro, o Grande</button></li>
+        <li><button name="errado800">D) Catarina II</button></li>
     </form>
 </section>
 {% endblock %}
