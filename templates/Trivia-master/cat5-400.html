@@ -6,15 +6,17 @@ Matemática por 400
 
 {% block content %}
 <section>
-    Pergunta:
+    <h3>Maria aplicou seu dinheiro em um fundo que rende 10% por ano. Considerando que seu lucro é automaticamente investido, quanto tempo ela demorará para dobrar seu investimento inicial?</h3>
     <img src="{{ url_for('static', filename='Images/nomedoarquivo.tipodoarquivo') }}" alt="Imagem da questão">
 </section>
 <section>
     <form method="POST">
-        <li><button name="certo400">Resposta1</button></li>
-        <li><button name="errado400">Resposta1</button></li>
-        <li><button name="errado400">Resposta1</button></li>
-        <li><button name="errado400">Resposta1</button></li>
+        <li><button name="errado400">4 Anos</button></li>
+        <li><button name="certo400">8 Anos</button></li>
+        <li><button name="errado400">7 Anos</button></li>
+        <li><button name="errado400">2 Anos</button></li>
+        <li><button name="errado400">10 Anos</button></li>
     </form>
 </section>
 {% endblock %}
+

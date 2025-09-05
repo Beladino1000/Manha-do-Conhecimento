@@ -6,15 +6,17 @@ Biologia por 200
 
 {% block content %}
 <section>
-    Pergunta:
-    <img src="{{ url_for('static', filename='Images/nomedoarquivo.tipodoarquivo') }}" alt="Imagem da questão">
+    <h3>Qual desses animais bota ovos?</h3>
 </section>
 <section>
     <form method="POST">
-        <li><button name="certo200">Resposta1</button></li>
-        <li><button name="errado200">Resposta1</button></li>
-        <li><button name="errado200">Resposta1</button></li>
-        <li><button name="errado200">Resposta1</button></li>
+        <li><button name="errado200">A) Cachorro</button></li>
+        <li><button name="errado200">B) Gato</button></li>
+        <li><button name="certo200">C) Galinha</button></li>
+        <li><button name="errado200">D) Cavalo</button></li>
+        <li><button name="errado200">E) Porco</button></li>
     </form>
 </section>
 {% endblock %}
+
+

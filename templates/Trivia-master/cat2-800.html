@@ -6,15 +6,16 @@ Biologia por 800
 
 {% block content %}
 <section>
-    Pergunta:
-    <img src="{{ url_for('static', filename='Images/nomedoarquivo.tipodoarquivo') }}" alt="Imagem da questão">
+    <h3>No ciclo do carbono, qual processo devolve CO₂ à atmosfera?</h3>
 </section>
 <section>
     <form method="POST">
-        <li><button name="certo800">Resposta1</button></li>
-        <li><button name="errado800">Resposta1</button></li>
-        <li><button name="errado800">Resposta1</button></li>
-        <li><button name="errado800">Resposta1</button></li>
+        <li><button name="errado800">A) Fotossíntese</button></li>
+        <li><button name="certo800">B) Respiração celular</button></li>
+        <li><button name="errado800">C) Fixação biológica</button></li>
+        <li><button name="errado800">D) Quimiossíntese</button></li>
+        <li><button name="errado800">E) Fermentação</button></li>
     </form>
 </section>
 {% endblock %}
+

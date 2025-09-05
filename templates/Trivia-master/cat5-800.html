@@ -6,15 +6,17 @@ Matemática por 800
 
 {% block content %}
 <section>
-    Pergunta:
+    <h3>Qual teorema afirma que o número 360 pode ser escrito como 23·32·5 ?</h3>
     <img src="{{ url_for('static', filename='Images/nomedoarquivo.tipodoarquivo') }}" alt="Imagem da questão">
 </section>
 <section>
     <form method="POST">
-        <li><button name="certo800">Resposta1</button></li>
-        <li><button name="errado800">Resposta1</button></li>
-        <li><button name="errado800">Resposta1</button></li>
-        <li><button name="errado800">Resposta1</button></li>
+        <li><button name="errado800">Teorema Fundamental da Álgebra</button></li>
+        <li><button name="errado800">Teorema de Pitágoras</button></li>
+        <li><button name="certo800">Teorema Fundamental da Aritmética</button></li>
+        <li><button name="errado800">Teorema de Arrhenius</button></li>
+        <li><button name="errado800">Teorema fundamental do Cálculo</button></li>
     </form>
 </section>
 {% endblock %}
+

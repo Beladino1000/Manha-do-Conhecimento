@@ -6,15 +6,17 @@ Matemática por 600
 
 {% block content %}
 <section>
-    Pergunta:
+    <h3>Qual é o valor de 0 elevado a 0?</h3>
     <img src="{{ url_for('static', filename='Images/nomedoarquivo.tipodoarquivo') }}" alt="Imagem da questão">
 </section>
 <section>
     <form method="POST">
-        <li><button name="certo600">Resposta1</button></li>
-        <li><button name="errado600">Resposta1</button></li>
-        <li><button name="errado600">Resposta1</button></li>
-        <li><button name="errado600">Resposta1</button></li>
+        <li><button name="errado600">1</button></li>
+        <li><button name="errado600">Infinito</button></li>
+        <li><button name="errado600">Indefinido</button></li>
+        <li><button name="errado600">0</button></li>
+        <li><button name="certo600">Indeterminado</button></li>
     </form>
 </section>
 {% endblock %}
+

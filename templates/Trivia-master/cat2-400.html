@@ -6,15 +6,17 @@ Biologia por 400
 
 {% block content %}
 <section>
-    Pergunta:
-    <img src="{{ url_for('static', filename='Images/nomedoarquivo.tipodoarquivo') }}" alt="Imagem da questão">
+    <h3>As plantas produzem seu próprio alimento em um processo chamado:</h3>
 </section>
 <section>
     <form method="POST">
-        <li><button name="certo400">Resposta1</button></li>
-        <li><button name="errado400">Resposta1</button></li>
-        <li><button name="errado400">Resposta1</button></li>
-        <li><button name="errado400">Resposta1</button></li>
+        <li><button name="errado400">A) Respiração celular</button></li>
+        <li><button name="certo400">B) Fotossíntese</button></li>
+        <li><button name="errado400">C) Digestão</button></li>
+        <li><button name="errado400">D) Evaporação</button></li>
+        <li><button name="errado400">E) Transpiração</button></li>
     </form>
 </section>
 {% endblock %}
+
+

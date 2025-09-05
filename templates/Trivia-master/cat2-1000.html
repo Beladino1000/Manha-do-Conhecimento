@@ -6,15 +6,17 @@ Biologia por 1000
 
 {% block content %}
 <section>
-    Pergunta:
-    <img src="{{ url_for('static', filename='Images/nomedoarquivo.tipodoarquivo') }}" alt="Imagem da questão">
+    <h3>O filo dos anelídeos inclui minhocas e sanguessugas. Sua principal característica é:</h3>
 </section>
 <section>
     <form method="POST">
-        <li><button name="certo1000">Resposta1</button></li>
-        <li><button name="errado1000">Resposta1</button></li>
-        <li><button name="errado1000">Resposta1</button></li>
-        <li><button name="errado1000">Resposta1</button></li>
+        <li><button name="certo1000">A) Corpo segmentado em metâmeros</button></li>
+        <li><button name="errado1000">B) Corpo sem simetria definida</button></li>
+        <li><button name="errado1000">C) Exoesqueleto quitinoso</button></li>
+        <li><button name="errado1000">D) Corpo mole sem segmentação</button></li>
+        <li><button name="errado1000">E) Presença de notocorda</button></li>
     </form>
 </section>
 {% endblock %}
+
+

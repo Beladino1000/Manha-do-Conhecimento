@@ -6,15 +6,17 @@ Biologia por 600
 
 {% block content %}
 <section>
-    Pergunta:
-    <img src="{{ url_for('static', filename='Images/nomedoarquivo.tipodoarquivo') }}" alt="Imagem da questão">
+    <h3>Em relação ao RNA, qual base nitrogenada substitui a timina?</h3>
 </section>
 <section>
     <form method="POST">
-        <li><button name="certo600">Resposta1</button></li>
-        <li><button name="errado600">Resposta1</button></li>
-        <li><button name="errado600">Resposta1</button></li>
-        <li><button name="errado600">Resposta1</button></li>
+        <li><button name="errado600">A) Citosina</button></li>
+        <li><button name="errado600">B) Guanina</button></li>
+        <li><button name="certo600">C) Uracila</button></li>
+        <li><button name="errado600">D) Adenina</button></li>
+        <li><button name="errado600">E) Fabiosina</button></li>
     </form>
 </section>
 {% endblock %}
+
+
