@@ -16,13 +16,11 @@ Validador de senha
     {%if resposta%}
         <h4>{{resposta}}</h4>
         {%endif%}
-    {%if mostrar%}
-        <label for="csenha">Confirme sua senha: </label>
-        <input type="password" name="csenha" id="csenha">
-        <button name="define">Definir senha</button>
-        {%if resposta2%}
-            <h4>{{resposta2}}</h4>
-            {%endif%}
+    <label for="csenha">Confirme sua senha: </label>
+    <input type="password" name="csenha" id="csenha">
+    <button name="define">Definir senha</button>
+    {%if resposta2%}
+        <h4>{{resposta2}}</h4>
         {%endif%}
     </form>
 </section>

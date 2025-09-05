@@ -402,8 +402,6 @@
             .header-logo {
                 height: 50px;
             }
-        }
-
         /* ESTILOS PARA TÍTULOS DAS SEÇÕES */
         .content section h1 {
             font-family: 'Poppins', sans-serif;
@@ -495,3 +493,9 @@
             list-style: none;
             margin-bottom: 10px;
         }
+        
+        }
+        div.sec1{
+            margin-bottom: 10px;
+        }
+        
