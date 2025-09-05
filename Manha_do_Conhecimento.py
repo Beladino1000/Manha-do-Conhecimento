@@ -387,7 +387,7 @@ def trivia():
                            cat5_400=session['cat'][21],
                            cat5_600=session['cat'][22],
                            cat5_800=session['cat'][23],
-                           cat5_1000=session['cat'][24],
+                           cat5_1000=session['cat'][24]
                            )
 
 
