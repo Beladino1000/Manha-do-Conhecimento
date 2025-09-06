@@ -12,7 +12,7 @@ Trivia
             </section>
             {%if mensagem %}
                 <section>
-                    <p>{mensagem}</p>
+                    <p>{{mensagem|safe}}</p>
                 </section>
             {% endif %}
             </section>
